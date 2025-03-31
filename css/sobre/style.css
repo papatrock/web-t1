@@ -1,0 +1,90 @@
+body{
+    font-family: "Chakra Petch", serif;
+    background-color: black;
+    overflow-x: hidden;
+    background-image: url('../../images/home/undertale.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A6A6A6;
+    margin: 5%;
+    height: 70px;
+    width: 90%;
+    border-radius: 100px;
+
+    a{
+        flex: 1;
+        text-align: center;
+        color: black;
+        margin: 0;
+        font-size: x-large;
+        &#sobre {
+            color: black;
+            height: 80%;
+            background-color: white;
+            border-radius: 100px;
+            padding: 0 10px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 5px;
+        }
+    }
+}
+
+
+footer {
+    background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	margin-top: 50px;
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .bi {
+        margin: 1%;
+        position:relative;
+        font-size: 3rem;
+        color: white; 
+        align-self: center;
+    }
+
+    img{
+        width: 4rem;
+        &#right{
+            float: right; 
+            margin-left: 20px; 
+            margin-top: 0; 
+        }
+        &#left{
+            float: left; 
+            margin-right: 20px; 
+            margin-top: 0; 
+        }
+        
+    }
+
+
+  }

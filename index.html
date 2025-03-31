@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!--icons-->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        
+
+    <!--css da pag-->
+    <link href="css/home/style.css" rel="stylesheet">
+    <title>Home pol</title>
+    <link rel="icon" href="images/icon.jpg" type="image/png">
+</head>
+<body>
+
+    <div class="container main">
+        <div class="row">
+            <div class="col-4 navbar">
+                <a href="#/homepol" id="home">Home</a>
+                <a href="#/sobre" id="sobre">Sobre</a>
+                <a href="#/contato" id="contato">Contato</a>
+                <a href="#/projetos" >Projetos</a>
+                
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-6" id="apresentacao"> <!-- coluna do sobre -->
+                        <p>Olá! me chamo Patrick estudante de Ciência da computação na UFPR desde 2021, atualmente no quinto periodo.
+                           Entusiasta em software livre, minhas áreas de interesse são: redes, segurança, computação gráfica e programação web. Você pode saber mais sobre minha trajetória e meus contatos em "Sobre".
+                        </p>
+      
+                    </div>
+                    <div class="col-sm-12 col-lg-6 projetos" id="projeto"> <!-- coluna 'projetos' -->
+                        <h1 style="text-align: center;">Alguns dos meus projetos:</h1>
+                        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/papatrock/ballz-C">
+                                  <img src="images/home/ballz-completo.png" class="d-block w-100" alt="Replica do jogo Ballz feito em C com a biblioteca Allegro">
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h5>Ballz</h5>
+                                    <p>Replica do jogo Ballz implementado em C com a biblioteca Allegro.</p>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="carousel-item">
+                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/papatrock/nvim">
+                                  <img src="images/home/neovim.png" class="d-block w-100" alt="Minha configuração do neovim">
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h5>Neovim</h5>
+                                    <p>Minha configuração do neovim.</p>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="carousel-item">
+                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/papatrock/tf_arquitetura">
+                                  <img src="images/home/processador.png" class="d-block w-100" alt="Replica do jogo Ballz feito em C com a biblioteca Allegro">
+                                  <div class="carousel-caption d-none d-md-block">
+                                      <h5>Processador 8 bits</h5>
+                                      <p>Processador 8 bits baseado no RISC-V com memória cache implementado no logisim evolution.</p>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="carousel-item">
+                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/papatrock/t1-redes">
+                                  <img src="images/home/backup.png" class="d-block w-100" alt="Sistema servidor-cliente de backup de arquivos.">
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h5>Sistema de backup</h5>
+                                    <p>Sistema servidor-cliente de backup de arquivos feito em raw socket.</p>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="carousel-item">
+                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/papatrock/trabalho-software-basico">
+                                <img src="images/home/meu-aloc.png" class="d-block w-100" alt="Alocador de memoria implementado em assembly x86.">
+                                <div class="carousel-caption d-none d-md-block">
+                                  <h5>Alocador de memória</h5>
+                                  <p>Alocador de memoria implementado em assembly x86.</p>
+                                </div>
+                                </a>
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+    
+    
+                          
+    
+                    </div>
+                    <div class="row tecnologias">
+                      <h2><strong>Tecnlogias que utilizo:</strong></h2>
+                      <div id="tech-icons">
+                        <i class="devicon-c-plain "></i>
+                        <i class="devicon-cplusplus-plain "></i>
+                        <i class="devicon-bash-plain"></i>
+                        <i class="devicon-linux-plain"></i>
+                        <i class="devicon-php-plain "></i>
+                        <i class="devicon-java-plain-wordmark"></i>
+                        <i class="devicon-javascript-plain"></i>
+                        <i class="devicon-git-plain-wordmark"></i>
+                        <i class="devicon-lua-plain"></i>
+                        <i class="devicon-docker-plain"></i>
+                        <i class="devicon-haskell-plain-wordmark"></i>
+                        <i class="devicon-laravel-original-wordmark"></i>
+                        <i class="devicon-symfony-original-wordmark colored"></i>
+                        <i class="devicon-vuejs-plain-wordmark"></i>
+                        <i class="devicon-mariadb-original-wordmark"></i>
+                        <i class="devicon-mysql-original"></i>
+                        <i class="devicon-postgresql-plain-wordmark"></i>
+                        <i class="devicon-doctrine-plain-wordmark"></i>
+                        <i class="devicon-neovim-plain-wordmark"></i>
+                                
+                      </div>
+    
+                    </div>
+                    
+            </div>
+    
+    
+                <div class="row proffissional-path">  
+                  <h1>Perfil profisional:</h1>
+                  <ul class="tree">
+                    <li class="year">2021
+                     <ul>
+                      <li class="title">Engressei na UFPR no curso de Computação</li>
+                     </ul>
+                    </li>
+    
+                    <li class="year">2022
+                     <ul>
+                      <li class="title">Ecomp
+                       <ul>
+                        <li class="subtitle">Acessor de qualidade
+                          <ul>
+                            <li class="description">Responsável pela infraestrutura técnica da empresa, incluindo manutenção de servidores e computadores, instalação e atualização de softwares, gerenciamento de contas de usuários e deploy de projetos. Também atuava na revisão de código dos projetos.</li>
+                          </ul>
+    
+                        </li>
+                        
+                        <li class="subtitle">Desenvolvedor back-end
+                            <ul>
+                              <li class="description">Desenvolvia back-end para projetos web e mobile usando PHP, MySQL, Git e Laravel, além de ministrar aulas de back-end para novos membros.</li>
+                            </ul>
+    
+                        </li>
+                       </ul>
+                      </li>
+                     </ul>
+                    </li>
+    
+                    <li class="year">2023
+                      <ul>
+                        <li class="title">Ecomp
+                          <ul>
+                           <li class="subtitle">Gerende de qualidade
+                            <ul>
+                              <li class="description">Atuava organizando reuniões, eventos e designando atividades para os membros da diretoria.</li>
+                            </ul>
+    
+                           </li>
+                          </ul>
+                         </li>
+                      </ul>
+                     </li>
+    
+                     <li class="year">2024
+                      <ul>
+                       <li class="title">Mapas culturais do Paraná
+                          <ul>
+                            <li class="description">Bolsista atuando no desenvolvimento web do projeto Rede Mapas do Paraná como programador full stack.</li>
+                          </ul>
+    
+                       </li>
+                      </ul>
+                     </li>
+                   </ul>
+                   
+    
+                </div>
+    
+                <div class="github-stuff">
+                  <div class="row">
+                    <div class="col github-stats">
+                      <img style="background-color: black; width: 80%;" src="https://ghchart.rshah.org/papatrock?color=#FF5733" alt="GitHub Contributions Chart">
+                    </div>
+                  </div>
+      
+                  <div class="row">
+                    <div class="col github-stats">
+                      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=papatrock&layout=compact&theme=dark" alt="Top Languages" />
+                    </div>
+    
+                    <div class="col github-stats">
+                      <img src="https://github-readme-stats.vercel.app/api?username=papatrock&show_icons=true&theme=dark" alt="GitHub Stats">
+                    </div>
+                    <div class="col github-stats">
+                      <img src="https://github-readme-streak-stats.herokuapp.com/?user=papatrock&theme=dark" alt="GitHub Streak" />
+                    </div>
+                  </div>
+      
+                </div>
+              
+                
+        
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/home/script.js"></script>
+    <script src="js/router.js"></script>
+</body>
+</html>
