@@ -4,7 +4,7 @@ const routes = {
     '/sobre': 'pages/sobre.html',
     '/contato': 'pages/contato.html',
     '/projetos': 'pages/projetos.html',
-    '/rest': 'pages/projetos.html',
+    '/rest': 'pages/rest.html',
 };
 
 function loadRoute() {
