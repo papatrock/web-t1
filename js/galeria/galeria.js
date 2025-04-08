@@ -12,10 +12,10 @@ function loadGalleryIfNeeded() {
       galleryContainer.innerHTML = '';
 
       const imageFiles = [];
-        for (let i = 1; i <= 56; i++) {
+        for (let i = 1; i <= 62; i++) {
             imageFiles.push(`${i}.jpg`);
         }
-        
+
       imageFiles.forEach(filename => {
         const img = document.createElement('img');
         img.src = `images/galeria/${filename}`;
