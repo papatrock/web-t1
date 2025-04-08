@@ -8,7 +8,7 @@ body{
     font-family: "Chakra Petch", serif;
     background-color: black;
     overflow-x: hidden;
-    background-image: url('../../images/home/undertale.jpg');
+    background-image: url('../images/home/undertale.jpg');
     background-repeat: no-repeat;
     height: 100%;
 }

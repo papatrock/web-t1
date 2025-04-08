@@ -1,5 +1,5 @@
 const routes = {
-    '/': { page: 'pages/home.html', css: null },
+    '/': { page: 'pages/home.html', css: 'css/home/style.css' },
     '/homepol': { page: 'pages/home.html', css: 'css/home/style.css' },
     '/sobre': { page: 'pages/sobre.html', css: 'css/sobre/style.css' },
     '/contato': { page: 'pages/contato.html', css: 'css/contato/style.css' },
@@ -37,6 +37,7 @@ function loadRoute() {
             document.getElementById('app').innerHTML = `<h1>Erro 404</h1><p>Página não encontrada.</p>`;
             console.error('Erro ao carregar a página:', err);
         });
+        window.scrollTo(0, 0);
 }
 
 window.addEventListener('hashchange', loadRoute);
