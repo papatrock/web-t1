@@ -23,7 +23,7 @@ body{
     width: 130px;
     height: 100vh;
     background-color: black;
-    border: 3px solid #1c0222;
+    border: 3px solid #31053b;
     
   }
 
@@ -37,7 +37,7 @@ body{
   
 footer {
     width: 100%;
-    background-color: #1c0222;
+    background-color: #31053b;
 	color: #fff;
 	padding: 20px;
 	text-align: center;
@@ -70,6 +70,7 @@ footer {
 
     img{
         width: 4rem;
+        position: relative;
         &#right{
             float: right; 
             margin-left: 20px; 

@@ -4,6 +4,7 @@ const routes = {
     '/sobre': { page: 'pages/sobre.html', css: 'css/sobre/style.css' },
     '/contato': { page: 'pages/contato.html', css: 'css/contato/style.css' },
     '/projetos': { page: 'pages/projetos.html', css: 'css/projetos/style.css' },
+    '/galeria': { page: 'pages/galeria.html', css: 'css/galeria/style.css' },
     '/meta': { page: 'pages/meta.html', css: 'css/meta/style.css' },
 };
 
@@ -15,7 +16,6 @@ function loadRoute() {
     const oldCss = document.getElementById('page-css');
     if (oldCss) oldCss.remove();
 
-    // Adiciona o novo CSS, se necessário
     if (route.css) {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
