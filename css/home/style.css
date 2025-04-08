@@ -1,54 +1,10 @@
-html {
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    margin: 0;
-    padding: 0;
-    font-family: "Chakra Petch", serif;
-    background-color: black;
-    overflow-x: hidden;
-    background-image: url('../../images/home/undertale.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 100vh;
-}
-
-  .wrapper { /* para nao puxar o padrao do bootstrap */
-    display: flex;
-    height: 100vh;
-  }
-
-/* ----------- SIDE BAR -----------------------------------*/
-  .sidebar {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;   /* Coloca os itens um embaixo do outro */
-    justify-content: center; /* flex-start:topo flex-end: baixo center: centro */
-    position: fixed;
-    width: 130px;
-    height: 100vh;
-    background-color: black;
-    border: 3px solid gray;
-    
-  }
-
-  .sidebar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    font-size: large;
-  }
-
-  .sidebar #sidebar-home{
+.sidebar #sidebar-home{
     color: black;
     background-color: whitesmoke;
     border-radius: 10px;
-  }
+}
 
-  #apresentacao{
+#apresentacao{
     margin-top: 10%;
     background-color: black;
     p{
@@ -226,53 +182,3 @@ body{
         margin: 0 auto;
     }
 }
-
-footer {
-    width: 100%;
-    background-color: #333;
-	color: #fff;
-	padding: 20px;
-	text-align: center;
-	margin-top: 50px;
-    border-radius: 10px;
-    
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    li {
-        display: inline-block;
-        margin: 0 10px;
-    }
-    
-    a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .bi {
-        margin: 1%;
-        position:relative;
-        font-size: 3rem;
-        color: white; 
-        align-self: center;
-    }
-
-    img{
-        width: 4rem;
-        &#right{
-            float: right; 
-            margin-left: 20px; 
-            margin-top: 0; 
-        }
-        &#left{
-            float: left; 
-            margin-right: 20px; 
-            margin-top: 0; 
-        } 
-    }
-}
-
-

@@ -1,17 +1,31 @@
 const routes = {
-    '/': 'index.html',  
-    '/homepol': 'index.html',  
-    '/sobre': 'pages/sobre.html',
-    '/contato': 'pages/contato.html',
-    '/projetos': 'pages/projetos.html',
-    '/rest': 'pages/rest.html',
+    '/': { page: 'pages/home.html', css: null },
+    '/homepol': { page: 'pages/home.html', css: 'css/home/style.css' },
+    '/sobre': { page: 'pages/sobre.html', css: 'css/sobre/style.css' },
+    '/contato': { page: 'pages/contato.html', css: 'css/contato/style.css' },
+    '/projetos': { page: 'pages/projetos.html', css: 'css/projetos/style.css' },
+    '/meta': { page: 'pages/meta.html', css: 'css/meta/style.css' },
 };
 
 function loadRoute() {
     const path = window.location.hash.slice(1) || '/';
     const route = routes[path] || routes['/'];
 
-    fetch(route)
+    // Remove o CSS antigo da página, se existir
+    const oldCss = document.getElementById('page-css');
+    if (oldCss) oldCss.remove();
+
+    // Adiciona o novo CSS, se necessário
+    if (route.css) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = route.css;
+        link.id = 'page-css';
+        document.head.appendChild(link);
+    }
+
+    // Carrega o HTML da página
+    fetch(route.page)
         .then(response => {
             if (!response.ok) throw new Error('Página não encontrada');
             return response.text();
@@ -25,6 +39,5 @@ function loadRoute() {
         });
 }
 
-// Carregar rota inicial e escutar mudanças no hash
 window.addEventListener('hashchange', loadRoute);
 window.addEventListener('DOMContentLoaded', loadRoute);
