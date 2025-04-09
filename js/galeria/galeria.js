@@ -20,6 +20,7 @@ function loadGalleryIfNeeded() {
         const img = document.createElement('img');
         img.src = `images/galeria/${filename}`;
         img.alt = filename;
+        img.id = 'gallery-image';
         img.onerror = () => img.remove();
         galleryContainer.appendChild(img);
       });

@@ -4,26 +4,25 @@
     border-radius: 10px;
 }
 
-img{
-    width: 10rem;
+
+#gallery-image{
+    width: 9rem;
     margin: 0.5%;
     position:relative;
     align-self: center;
     opacity: 1;
     border: 2px solid gray;
     border-radius: 10px;
-
-
 }
 
 #gallery-container{
+    display: flex;
+    flex-wrap: wrap;
     background-color: #31053b;
     align-items: center;
     border: 3px solid gray;
     border-radius: 10px;
-    .img{
-        
-    }
+
 }
 
 h1{
