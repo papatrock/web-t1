@@ -1,5 +1,1 @@
-## TODO
-- [ ] navbar responsiva
-
-## Links
-[Anotações](https://hackmd.io/vpOUJkPLQNmDzkRPxdir4Q)
+Hospedado em: https://www.inf.ufpr.br/pol21/
