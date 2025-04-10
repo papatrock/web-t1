@@ -32,33 +32,35 @@
     background-color: #A6A6A6;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    
+
+    section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 
     h1{
         color: black;
         text-align: center;
     }
     img {
-        width: 100%;
-        height: auto;
+        width: 20rem;
         display: block;
         border-radius: 10px;
     }
 
     h5 {
-        position: relative; 
         text-align: center;
-        background-color: rgba(166, 166, 166, 0.6);
         color: black;
-        border-radius: 10px;
     }
 
-    p {
+    figcaption {
         color: black;
-        background-color: rgba(166, 166, 166, 0.6);
         text-align: center;
-        padding: 5px 0;
-        border-radius: 10px;
+    }
+
+    a{
+        text-decoration: none;
     }
 }
 

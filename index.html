@@ -16,6 +16,7 @@
 
     <!--css da pag-->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/home/style.css">
     <title>Home pol</title>
     <link rel="icon" href="images/icon.jpg" type="image/png">
 </head>
@@ -23,16 +24,107 @@
 <body>
 
     <div class="sidebar ">
-      <a href="#/homepol" id="sidebar-home">Home</a>
-      <a href="#/sobre" id="sidebar-sobre">Sobre</a>
-      <a href="#/projetos" id="sidebar-projeto">Projetos</a>
-      <a href="#/contato" id="sidebar-contato">Contato</a>
-      <a href="#/galeria" id="sidebar-galeria">Galeria</a>
-      <a href="#/meta" id="sidebar-meta">Meta</a>
+      <a href="index.html" id="sidebar-home">Home</a>
+      <a href="pages/sobre.html" id="sidebar-sobre">Sobre</a>
+      <a href="pages/projetos.html" id="sidebar-projeto">Projetos</a>
+      <a href="pages/contato.html" id="sidebar-contato">Contato</a>
+      <a href="pages/galeria.html" id="sidebar-galeria">Galeria</a>
+      <a href="pages/meta.html" id="sidebar-meta">Meta</a>
     </div>
     
 
-  <div class="main " id="app" style="margin-left: 13%; margin-right: 10%; flex-grow: 1;"></div>
+  <main class="main " style="margin-left: 13%; margin-right: 10%; flex-grow: 1;">
+      <div class="row">
+  
+        <article class="col-sm-12 col-lg-6" id="apresentacao"> <!-- coluna do sobre --> 
+          <p>Olá! me chamo Patrick estudante de Ciência da computação na UFPR desde 2021, atualmente no quinto periodo.
+             Entusiasta em software livre, minhas áreas de interesse são: redes, segurança, computação gráfica e programação web. Você pode saber mais sobre minha trajetória <strong>"Sobre"</strong>.
+          </p>
+  
+        </article>
+      <!-- ---------------fim coluna sobre ---------------------->
+  
+      <!----------------- coluna 'projetos' --------------------->
+      <section class="col-sm-12 col-lg-6 projetos" id="projeto"> 
+        <h1 style="text-align: center;">Alguns dos meus projetos:</h1>
+        <section class="col">
+          <figure class="row">
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/papatrock/tf_arquitetura">
+              <img src="images/home/processador.png" alt="Projeto Ballz feito em C na biblioteca allegro5">
+              <h5>Processador 8 bits</h5>
+              <figcaption>Processador 8 bits baseado no RISC-V.</figcaption>
+            </a>
+
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/papatrock/ballz-C">
+              <img src="images/home/ballz-completo.png" alt="Minha configuração do neovim">
+              <h5>Ballz</h5>
+              <figcaption>Replica do jogo Ballz implementado em C com a biblioteca Allegro.</figcaption>
+            </a>
+            </figure>
+
+          <figure class="row">
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/papatrock/t1-redes">
+              <img src="images/home/backup.png" alt="Projeto Ballz feito em C na biblioteca allegro5">
+              <h5>Sistema de backup</h5>
+              <figcaption>Sistema servidor-cliente de backup de arquivos feito em raw socket.</figcaption>
+            </a>
+
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/papatrock/trabalho-software-basico">
+              <img src="images/home/meu-aloc.png" alt="Minha configuração do neovim">
+              <h5>Alocador de memória</h5>
+              <figcaption>Alocador de memoria implementado em assembly x86.</figcaption>
+            </a>
+          </figure>
+        </section>
+        
+
+
+        </figure>
+
+        
+      </section>
+      <!-- ---------------fim da coluna projetos-------------------->
+  
+  
+  
+    </div>
+      <!-- ---------------coluna tecnologias-------------------------------->
+      <div class="row tecnologias">
+        <h2><strong>Tecnlogias que utilizo:</strong></h2>
+        <div id="tech-icons">
+          <i class="devicon-c-plain "></i>
+          <i class="devicon-cplusplus-plain "></i>
+          <i class="devicon-bash-plain"></i>
+          <i class="devicon-linux-plain"></i>
+          <i class="devicon-php-plain "></i>
+          <i class="devicon-java-plain-wordmark"></i>
+          <i class="devicon-javascript-plain"></i>
+          <i class="devicon-git-plain-wordmark"></i>
+          <i class="devicon-lua-plain"></i>
+          <i class="devicon-docker-plain"></i>
+          <i class="devicon-haskell-plain-wordmark"></i>
+          <i class="devicon-laravel-original-wordmark"></i>
+          <i class="devicon-symfony-original-wordmark colored"></i>
+          <i class="devicon-vuejs-plain-wordmark"></i>
+          <i class="devicon-mariadb-original-wordmark"></i>
+          <i class="devicon-mysql-original"></i>
+          <i class="devicon-postgresql-plain-wordmark"></i>
+          <i class="devicon-doctrine-plain-wordmark"></i>
+          <i class="devicon-neovim-plain-wordmark"></i>
+                  
+        </div>
+  
+      </div>
+      <!-- ---------------fim da coluna tecnologias-------------------------------->
+  
+      <!-- ----------------profissional path------------------------->
+      
+  
+    </main>
+
+
+
+  </div>
   
 </div>
   <footer>
@@ -54,9 +146,5 @@
     
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="js/home/script.js"></script>
-  <script src="js/router.js"></script>
-  <script src="js/galeria/galeria.js"></script>
 </body>
 </html>
