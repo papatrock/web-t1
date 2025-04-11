@@ -15,3 +15,11 @@ function updateActiveLink() {
 // Atualiza ao carregar a página e ao mudar o hash
 window.addEventListener('hashchange', updateActiveLink);
 window.addEventListener('load', updateActiveLink);
+
+
+const resizeBtn = document.querySelector('[data-resize-btn]');
+
+resizeBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    document.body.classList.toggle('sb-expanded');
+});

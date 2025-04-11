@@ -13,6 +13,16 @@
     opacity: 1;
     border: 2px solid gray;
     border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+#gallery-image:hover{
+    transform: scale(2);
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    z-index: 10;
+    
 }
 
 #gallery-container{
@@ -26,6 +36,7 @@
 }
 
 h1{
+    margin: 5%;
     width: 100%;
     display: flex;
     justify-content: center;
