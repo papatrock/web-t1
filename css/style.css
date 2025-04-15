@@ -11,7 +11,7 @@ body{
     font-family: "Chakra Petch", serif;
     background-color: black;
     overflow-x: hidden;
-    background-image: url('../images/home/undertale.jpg');
+    background-image: url('../images/home/undertale.jpg'), linear-gradient(#31053b,black);
     background-repeat: no-repeat;
     height: 100%;
 }
@@ -23,11 +23,10 @@ body.sb-expanded {
 
 /* ----------- SIDE BAR -----------------------------------*/
 
-/*inset: 0 auto 0 */
   .sidebar {
     position: fixed;
     inset: 0 auto 0 0;
-    padding: 1rem;
+    
     /*width: 150px;*/
     width: var(--sb-width);
     background-image: linear-gradient(black, #31053b);
@@ -41,6 +40,7 @@ body.sb-expanded {
   }
 
   nav ul {
+    padding-left: 0;
     list-style: none;
     height: 100%;
     display: flex;
