@@ -57,12 +57,12 @@
     }
     
     ul.tree li.title{
-        color: #009929;
+        color: #5ccb5f;
         font-size: large;
     }
     
     ul.tree li.subtitle{
-        color: #5ccb5f;
+        color: #009929;
         font-size: medium;
     }
     
@@ -88,6 +88,7 @@
     }
     h1{
         color: #2ea44f;
+        
     }
     .github-stats{
         width: 80%;
