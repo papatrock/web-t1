@@ -12,7 +12,7 @@ function loadGalleryIfNeeded() {
       galleryContainer.innerHTML = '';
 
       const imageFiles = [];
-        for (let i = 1; i <= 64; i++) {
+        for (let i = 1; i <= 66; i++) {
             imageFiles.push(`${i}.jpg`);
         }
 
