@@ -1,34 +1,12 @@
-function findIt(evt) {
-    const canvas = document.getElementById("canvas");
-    const rect = canvas.getBoundingClientRect();
-    // Coordenadas relativas ao canvas
-    const x = evt.clientX - rect.left;
-    const y = evt.clientY - rect.top;
 
-    document.getElementById("xcoor1").value = Math.round(x);
-    document.getElementById("ycoor1").value = Math.round(y);
-    document.getElementById("xcoor2").value = evt.screenX;
-    document.getElementById("ycoor2").value = evt.screenY;
-
-}
-
-function showClickCoords(evt) {
-    const canvas = document.getElementById("canvas");
-    const rect = canvas.getBoundingClientRect();
-    const x = Math.round(evt.clientX - rect.left);
-    const y = Math.round(evt.clientY - rect.top);
-
-    document.getElementById("xcoor3").value = x;
-    document.getElementById("ycoor3").value = y;
-}
 
 var ctx = document.getElementById("canvas").getContext("2d");
 var offset = 0;
 
-let lines = [
-    { x1: 320, y1: 230, x2: 380, y2: 100 }
-];
-let dragging = { lineIdx: null, point: null };
+let vertices = [];
+let lines = [];
+
+let dragging = { lineIdx: null, point: null, vertexIdx: null };
 
 function draw() {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
@@ -188,4 +166,4 @@ window.onload = function() {
     draw();
 };
 
-draw();
+//draw();
