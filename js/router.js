@@ -6,7 +6,7 @@ const routes = {
   '/projetos': { page: 'pages/projetos.html', css: 'css/projetos/style.css' },
   '/galeria': { page: 'pages/galeria.html', css: 'css/galeria/style.css' },
   '/meta': { page: 'pages/meta.html', css: 'css/meta/style.css' },
-  '/retas-e-poligonos': { page: 'pages/retas-e-poligonos.html', css: 'css/retas-e-poligonos/style.css' },
+  //'/retas-e-poligonos': { page: 'pages/retas-e-poligonos.html', css: 'css/retas-e-poligonos/style.css' },
 };
 
 function loadRoute() {

@@ -1,3 +1,15 @@
+.sidebar #retas-e-poligonos {
+  color: black;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
 canvas {
-  border: 1px solid rgb(255, 255, 255);
+  background-color: white;
+  bottom: 5px solid #31053b;
+}
+
+p {
+  font-size: 1.2em;
+  color: #e7dee9;
 }
