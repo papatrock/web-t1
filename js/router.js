@@ -6,6 +6,7 @@ const routes = {
   '/projetos': { page: 'pages/projetos.html', css: 'css/projetos/style.css' },
   '/galeria': { page: 'pages/galeria.html', css: 'css/galeria/style.css' },
   '/meta': { page: 'pages/meta.html', css: 'css/meta/style.css' },
+  '/visualizator': { page: 'pages/visualizator.html', css: 'css/visualizator/style.css' },
   //'/retas-e-poligonos': { page: 'pages/retas-e-poligonos.html', css: 'css/retas-e-poligonos/style.css' },
 };
 
@@ -32,7 +33,15 @@ function loadRoute() {
       return response.text();
     })
     .then(html => {
-      document.getElementById('app').innerHTML = html;
+    document.getElementById('app').innerHTML = html;
+
+        if (path === '/visualizator') {
+            // ... (carrega jQuery e jQuery UI)
+            // Depois:
+            const script = document.createElement('script');
+            script.src = 'js/visualizator/visualizator.js';
+            document.body.appendChild(script);
+        }
     })
     .catch(err => {
       document.getElementById('app').innerHTML = `<h1>Erro 404</h1><p>Página não encontrada.</p>`;

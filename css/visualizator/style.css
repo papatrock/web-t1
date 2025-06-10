@@ -1,0 +1,132 @@
+body,
+#app,
+section {
+  color: #f5f5f5;
+  background: #181818;
+}
+
+#grade {
+  width: 100%;
+  border-collapse: separate;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 950px;
+}
+
+.grade__cell {
+  min-width: 110px;
+  min-height: 80px;
+  padding: 16px 8px;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.grade_header__cell {
+  background: #222;
+  color: #f5f5f5;
+  font-weight: bold;
+}
+
+.header__divisor {
+  height: 4px;
+  background: #444;
+  border: none;
+}
+
+.approved {
+  background: #2ecc40;
+  color: #fff;
+}
+
+.unapproved {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.registered {
+  background: #3498db;
+  color: #fff;
+}
+
+.equivalence {
+  background: #ffe066;
+  color: #222;
+}
+
+.canceled {
+  background: #888;
+  color: #fff;
+}
+
+.locked {
+  background: #aaa;
+  color: #fff;
+}
+
+.didNotAttended,
+.nao-cursado {
+  background: #222;
+  color: #bbb;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.history__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.history__cell {
+  /* Remove borda interna */
+  background: #222;
+  color: #f5f5f5;
+  border-radius: 8px;
+  min-width: 120px;
+  padding: 8px;
+}
+
+.divisor {
+  border-bottom: 2px solid #444;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: #222;
+  color: #f5f5f5;
+  padding: 32px 24px;
+  border-radius: 12px;
+  min-width: 320px;
+  max-width: 90vw;
+  box-shadow: 0 0 16px #000;
+  position: relative;
+}
+
+#students,
+#studentInfo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+}
