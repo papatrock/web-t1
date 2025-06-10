@@ -132,7 +132,6 @@ function showPopUp(code) {
     $('#popup').fadeIn(150);
 }
 
-// Fechar popup ao clicar no X ou fora do conteúdo
 $(document).on('click', '#popup-close', function() {
     $('#popup').fadeOut(150);
 });
@@ -207,27 +206,38 @@ function setStudentTable() {
 }
 
 $(function() {
-    // Carrega XML ao iniciar
     $.ajax({
         url: 't4/alunos.xml',
         dataType: 'xml',
         success: function(xml) {
             treatXml(xml);
-            setLoadedStudents();
+            selectedStudent = students[0];
             setStudentInfo();
             setStudentTable();
 
-            $('#students').on('change', function() {
-                selectedStudent = students.find(student => student.grr == this.value);
+            $('#search-btn').on('click', function() {
+                const ra = $('#search-ra').val().trim();
+                const aluno = students.find(student => student.grr === ra);
+                if (!aluno) {
+                    alert('RA não encontrado!');
+                    return;
+                }
+                selectedStudent = aluno;
                 $('#history').html('');
                 setStudentInfo();
                 setStudentTable();
+            });
+
+            // Enter no input também busca
+            $('#search-ra').on('keypress', function(e) {
+                if (e.which === 13) {
+                    $('#search-btn').click();
+                }
             });
         },
         error: function() {
             alert('Erro ao carregar XML. Rode em servidor local!');
         }
     });
-    // Limpa histórico ao trocar aluno
     $('#history').html('');
 });
