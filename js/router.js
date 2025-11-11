@@ -7,6 +7,7 @@ const routes = {
   '/galeria': { page: 'pages/galeria.html', css: 'css/galeria/style.css' },
   '/meta': { page: 'pages/meta.html', css: 'css/meta/style.css' },
   '/visualizator': { page: 'pages/visualizator.html', css: 'css/visualizator/style.css' },
+  '/minicoin': { page: 'pages/miniCoin.html', css: 'css/minicoin/style.css' },
   //'/retas-e-poligonos': { page: 'pages/retas-e-poligonos.html', css: 'css/retas-e-poligonos/style.css' },
 };
 
