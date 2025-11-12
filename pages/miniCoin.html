@@ -5,12 +5,12 @@
             <h1>Relatório do trabalho de Redes II </h1>
             <h2>Alunos</h2>
             <p> Patrick Oliveira Lemes GRR20211777</p>
-            <p> Sabry Inacio Rafrafi GRR20170655</p>
+            <p> Sabry Inacio Rafrafi GRR</p>
 
             <h1>Implementação</h1>
             <p>
                 Para a implementação da conexão cliente - servidor foi utilizado a biblioteca do python <strong>Lib/socket.py</strong> que contem funções
-                que facilitam a conexão entre processos via TCP/IP
+                que facilitam a criação de conexões entre processos via TCP/IP
             </p>
             <h2>Implementação do Servidor</h2>
                 <p>
@@ -18,6 +18,7 @@
                     toda logica de criação e gerenciamento da chain fica no servidor
                 </p>
                 <h3>Bind da conexão</h3>
+                <p>Primeiro criamos o socket:</p>
                 <pre>
                     <code>
                         # Cria um socket
@@ -41,7 +42,7 @@
                         # proto foi omitido
                     </code>
                 </pre>
-
+                <p>Após isso é feito o bind do socket a um endereço definido:</p>
 
                 <pre>
                     <code>
@@ -53,6 +54,7 @@
                        sock.bind(server_address)
                     </code>
                 </pre>
+                <p>Ou seja, o socket TCP criado está "bindado" a porta 8082 do endereço "localhost"</p>
 
 
             <h2>Implementação do Cliente</h2>
