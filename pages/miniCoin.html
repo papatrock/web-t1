@@ -1,6 +1,74 @@
 <section id="app">
 
     <section class="main-minicoin">
+        <div class="web-socket-container" style="padding: 30px;">
+            <h1>Relatório do trabalho de Redes II </h1>
+            <h2>Alunos</h2>
+            <p> Patrick Oliveira Lemes GRR20211777</p>
+            <p> Sabry Inacio Rafrafi GRR20170655</p>
+
+            <h1>Implementação</h1>
+            <p>
+                Para a implementação da conexão cliente - servidor foi utilizado a biblioteca do python <strong>Lib/socket.py</strong> que contem funções
+                que facilitam a conexão entre processos via TCP/IP
+            </p>
+            <h2>Implementação do Servidor</h2>
+                <p>
+                    Para a implementação do <strong>MiniCoin</strong> toda a <strong>Blockchain</strong> fica no servidor, então além da parte de conexão,
+                    toda logica de criação e gerenciamento da chain fica no servidor
+                </p>
+                <h3>Bind da conexão</h3>
+                <pre>
+                    <code>
+                        # Cria um socket
+                        sock = socket.socket(family, type, proto = 0)
+                    </code>
+                </pre>
+                <p>
+                    <strong>socket.socket</strong> cria um objeto do tipo socket com base nos parametros passados
+                    O parametro <strong>family</strong> espeficica a familia de endereços que se deseja utilizar, no nosso caso utilizamos, podendo ser IPv4, IPv6 entre
+                    outros mais especificos; No nosso caso utilizamos o <strong>socket.AF_INET</strong>  (iPv4)
+                    O parametro <strong>type</strong> especifica o tipo do socket utilizado, o que determina a semantica da comunicação, ela pode ser TCP, UDP,
+                    RAW entre outros; No nosso caso utilizamos o <strong>socket.SOCK_STREAM</strong> (TCP)
+                    Já o parametro <strong>proto</strong> especifica qual protocolo será utilizado, por default ele é "0" e quando setado assim, a escolha do protocolo
+                    é feito de forma automática com base no tipo e na familia escolhida
+                    Então, nosso socket foi criado na forma:
+                </p>
+                <pre>
+                    <code>
+                        # Cria um socket
+                        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                        # proto foi omitido
+                    </code>
+                </pre>
+
+
+                <pre>
+                    <code>
+                        # define o endereço e a porta do servidor
+                       def server(host = 'localhost', port=8082):
+                       server_address = (host, port)
+
+                       # Faz o bind do socket na porta e endereço especificado
+                       sock.bind(server_address)
+                    </code>
+                </pre>
+
+
+            <h2>Implementação do Cliente</h2>
+
+            <h2>funcionamento</h2>
+            <p>opções e deposito / retirada</p>
+
+
+            implementação em web socket aqui
+            <div>
+                cliente
+            </div>
+            <div>
+                servidor
+            </div>
+        </div>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore quae incidunt sit quia nostrum molestiae voluptas commodi nobis cum natus quisquam deserunt impedit consectetur veritatis doloremque exercitationem nulla, ad maxime.</p>
         <img src="images/minicoin/diagrama.png" alt="Diagrama de funcionamento do sistema">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim reiciendis illo fuga culpa nesciunt ea? Repellat perspiciatis sapiente dicta earum voluptatem rem eveniet quia. Maxime sapiente quis recusandae corrupti asperiores.</p>
