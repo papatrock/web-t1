@@ -1,0 +1,35 @@
+=============================================================================
+Iniciando servidor do Block Chain
+=============================================================================
+Criando genesis...
+Genesis criado com sucesso!
+
+======================
+Blockchain completa:
+======================
+
+Bloco 0:
+Owner:    genesis
+Amount:   100
+Nonce:    0
+Hash:     a30d13f4b7aac19b3ba25c0b3db3dd8bbeb93fcb6929dd9e4351596b7ca38810
+Prev. Hash: 0
+======================
+Servidor iniciado no host: localhost port: 8082 
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'owner_name': 'sabry', 'amount': -80}
+Processando mensagem....
+Saldo insuficiente
+transação INVALIDA: saldo insuficiente
+Enviando resposta {'status': 'erro', 'tipo': 'saldo insuficiente', 'owner_name': 'sabry', 'saldo': 0} para ('127.0.0.1', 59370)
+Fim da transação
+============================
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'exit': True}
+Processando mensagem....
+
+Fechando conexão...

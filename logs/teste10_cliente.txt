@@ -1,0 +1,21 @@
+=============================================================================
+Iniciando cliente do Block Chain
+=============================================================================
+Cliente iniciado no host: localhost port: 8082 
+
+
+
+=== Menu ===
+1. Nova movimentação
+2. Ver saldo
+3. Sair
+Escolha uma opção: e
+Opçao inválida
+
+=== Menu ===
+1. Nova movimentação
+2. Ver saldo
+3. Sair
+Escolha uma opção: 3
+Enviando {'exit': True}
+Fechando conexão...

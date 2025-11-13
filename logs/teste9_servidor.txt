@@ -1,0 +1,25 @@
+=============================================================================
+Iniciando servidor do Block Chain
+=============================================================================
+Criando genesis...
+Genesis criado com sucesso!
+
+======================
+Blockchain completa:
+======================
+
+Bloco 0:
+Owner:    genesis
+Amount:   100
+Nonce:    0
+Hash:     01f8177ffa6754227089d5ad5aa35f3cef6a82d7153658eaee61c872569dd55a
+Prev. Hash: 0
+======================
+Servidor iniciado no host: localhost port: 8082 
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'exit': True}
+Processando mensagem....
+
+Fechando conexão...

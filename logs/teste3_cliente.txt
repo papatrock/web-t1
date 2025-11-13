@@ -1,0 +1,58 @@
+=============================================================================
+Iniciando cliente do Block Chain
+=============================================================================
+Cliente iniciado no host: localhost port: 8082 
+
+
+
+=== Menu ===
+1. Nova movimentação
+2. Ver saldo
+3. Sair
+Escolha uma opção: 1
+Digite o nome do proprietário: sabry
+Digite a quantia (inteiro) da movimentação: 50
+Enviando {'owner_name': 'sabry', 'amount': 50}
+Resposta recebida, processando resposta...
+{'status': 'sucesso', 'owner_name': 'sabry', 'saldo': 50}
+
+=== Menu ===
+1. Nova movimentação
+2. Ver saldo
+3. Sair
+Escolha uma opção: 1
+Digite o nome do proprietário: sabry
+Digite a quantia (inteiro) da movimentação: -80
+Enviando {'owner_name': 'sabry', 'amount': -80}
+Resposta recebida, processando resposta...
+{'status': 'erro', 'tipo': 'saldo insuficiente', 'owner_name': 'sabry', 'saldo': 50}
+
+=== Menu ===
+1. Nova movimentação
+2. Ver saldo
+3. Sair
+Escolha uma opção: 1
+Digite o nome do proprietário: patrick
+Digite a quantia (inteiro) da movimentação: 40
+Enviando {'owner_name': 'patrick', 'amount': 40}
+Resposta recebida, processando resposta...
+{'status': 'sucesso', 'owner_name': 'patrick', 'saldo': 40}
+
+=== Menu ===
+1. Nova movimentação
+2. Ver saldo
+3. Sair
+Escolha uma opção: 1
+Digite o nome do proprietário: patrick
+Digite a quantia (inteiro) da movimentação: -80
+Enviando {'owner_name': 'patrick', 'amount': -80}
+Resposta recebida, processando resposta...
+{'status': 'erro', 'tipo': 'saldo insuficiente', 'owner_name': 'patrick', 'saldo': 40}
+
+=== Menu ===
+1. Nova movimentação
+2. Ver saldo
+3. Sair
+Escolha uma opção: 3
+Enviando {'exit': True}
+Fechando conexão...

@@ -1,0 +1,13 @@
+Logs registrados:
+
+- Mostrar caso "Nova movimentação" com 1 usuário (teste 1)
+    - Mostrar caso "Nova movimentação" com 1 usuário fazendo 2 transações (teste 2)
+        - Mostrar caso "Nova movimentação" com 2 usuários fazendo 2 transações (teste 3)
+            - Mostrar caso "Nova movimentação" com 2 usuários fazendo 2 transações e consultando os saldos (teste 4)
+        - Mostrar caso "Nova movimentação" com 1 usuário fazendo 2 transações e consultando o saldo (teste 5)
+    - Mostrar caso "Nova movimentação" com 1 usuário e consultando o saldo (teste 6)
+    - Mostrar caso "Nova movimentação" com 1 usuário e quantia negativa (teste 7)
+- Mostrar caso "Ver saldo" (teste 8)
+- Mostrar caso "Sair" (teste 9)
+- Mostrar caso "else" (teste 10)
+- Mostrar caso "KeyboardInterrupt" (teste 11)

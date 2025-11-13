@@ -1,0 +1,55 @@
+=============================================================================
+Iniciando servidor do Block Chain
+=============================================================================
+Criando genesis...
+Genesis criado com sucesso!
+
+======================
+Blockchain completa:
+======================
+
+Bloco 0:
+Owner:    genesis
+Amount:   100
+Nonce:    0
+Hash:     39026833a4bad4908e410d8fa6e386cdf08cc263620d4756a9a542e97e970a04
+Prev. Hash: 0
+======================
+Servidor iniciado no host: localhost port: 8082 
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'owner_name': 'sabry', 'amount': 70}
+Processando mensagem....
+transação VALIDA, novo bloco inserido na BlockChain
+
+======================
+Blockchain completa:
+======================
+
+Bloco 0:
+Owner:    genesis
+Amount:   100
+Nonce:    0
+Hash:     39026833a4bad4908e410d8fa6e386cdf08cc263620d4756a9a542e97e970a04
+Prev. Hash: 0
+|
+v
+
+Bloco 1:
+Owner:    sabry
+Amount:   70
+Nonce:    0
+Hash:     5b6247f7251fbd9a32066d67688986d0be92a3c9e8b8e4f46c0c8a4707e16c76
+Prev. Hash: 39026833a4bad4908e410d8fa6e386cdf08cc263620d4756a9a542e97e970a04
+======================
+Enviando resposta {'status': 'sucesso', 'owner_name': 'sabry', 'saldo': 70} para ('127.0.0.1', 52736)
+Fim da transação
+============================
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'exit': True}
+Processando mensagem....
+
+Fechando conexão...

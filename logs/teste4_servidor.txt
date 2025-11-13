@@ -1,0 +1,275 @@
+=============================================================================
+Iniciando servidor do Block Chain
+=============================================================================
+Criando genesis...
+Genesis criado com sucesso!
+
+======================
+Blockchain completa:
+======================
+
+Bloco 0:
+Owner:    genesis
+Amount:   100
+Nonce:    0
+Hash:     48c02b622231a3801e44c39d283a4c802b5cc87b0bbcedd0d9ed3310c4d40adb
+Prev. Hash: 0
+======================
+Servidor iniciado no host: localhost port: 8082 
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'owner_name': 'sabry', 'amount': 80}
+Processando mensagem....
+transação VALIDA, novo bloco inserido na BlockChain
+
+======================
+Blockchain completa:
+======================
+
+Bloco 0:
+Owner:    genesis
+Amount:   100
+Nonce:    0
+Hash:     48c02b622231a3801e44c39d283a4c802b5cc87b0bbcedd0d9ed3310c4d40adb
+Prev. Hash: 0
+|
+v
+
+Bloco 1:
+Owner:    sabry
+Amount:   80
+Nonce:    0
+Hash:     bf9cbc43ac40766009305ade044f314c59801dac1235ca3872a2ce999549c2f8
+Prev. Hash: 48c02b622231a3801e44c39d283a4c802b5cc87b0bbcedd0d9ed3310c4d40adb
+======================
+Enviando resposta {'status': 'sucesso', 'owner_name': 'sabry', 'saldo': 80} para ('127.0.0.1', 38830)
+Fim da transação
+============================
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'owner_name': 'sabry', 'amount': -70}
+Processando mensagem....
+transação VALIDA, novo bloco inserido na BlockChain
+
+======================
+Blockchain completa:
+======================
+
+Bloco 0:
+Owner:    genesis
+Amount:   100
+Nonce:    0
+Hash:     48c02b622231a3801e44c39d283a4c802b5cc87b0bbcedd0d9ed3310c4d40adb
+Prev. Hash: 0
+|
+v
+
+Bloco 1:
+Owner:    sabry
+Amount:   80
+Nonce:    0
+Hash:     bf9cbc43ac40766009305ade044f314c59801dac1235ca3872a2ce999549c2f8
+Prev. Hash: 48c02b622231a3801e44c39d283a4c802b5cc87b0bbcedd0d9ed3310c4d40adb
+|
+v
+
+Bloco 2:
+Owner:    sabry
+Amount:   -70
+Nonce:    0
+Hash:     9bf641abdba4d13a2559fd13328cc906c5733513de1541ad5708d976eae53956
+Prev. Hash: bf9cbc43ac40766009305ade044f314c59801dac1235ca3872a2ce999549c2f8
+======================
+Enviando resposta {'status': 'sucesso', 'owner_name': 'sabry', 'saldo': 10} para ('127.0.0.1', 38830)
+Fim da transação
+============================
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'owner_name': 'patrick', 'amount': 40}
+Processando mensagem....
+transação VALIDA, novo bloco inserido na BlockChain
+
+======================
+Blockchain completa:
+======================
+
+Bloco 0:
+Owner:    genesis
+Amount:   100
+Nonce:    0
+Hash:     48c02b622231a3801e44c39d283a4c802b5cc87b0bbcedd0d9ed3310c4d40adb
+Prev. Hash: 0
+|
+v
+
+Bloco 1:
+Owner:    sabry
+Amount:   80
+Nonce:    0
+Hash:     bf9cbc43ac40766009305ade044f314c59801dac1235ca3872a2ce999549c2f8
+Prev. Hash: 48c02b622231a3801e44c39d283a4c802b5cc87b0bbcedd0d9ed3310c4d40adb
+|
+v
+
+Bloco 2:
+Owner:    sabry
+Amount:   -70
+Nonce:    0
+Hash:     9bf641abdba4d13a2559fd13328cc906c5733513de1541ad5708d976eae53956
+Prev. Hash: bf9cbc43ac40766009305ade044f314c59801dac1235ca3872a2ce999549c2f8
+|
+v
+
+Bloco 3:
+Owner:    patrick
+Amount:   40
+Nonce:    0
+Hash:     aeb46bb28ad2815d5ec902a0dfca2c129c3c2578f17f269b92d3b59ecdfded9b
+Prev. Hash: 9bf641abdba4d13a2559fd13328cc906c5733513de1541ad5708d976eae53956
+======================
+Enviando resposta {'status': 'sucesso', 'owner_name': 'patrick', 'saldo': 40} para ('127.0.0.1', 38830)
+Fim da transação
+============================
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'owner_name': 'patrick', 'amount': -70}
+Processando mensagem....
+Saldo insuficiente
+transação INVALIDA: saldo insuficiente
+Enviando resposta {'status': 'erro', 'tipo': 'saldo insuficiente', 'owner_name': 'patrick', 'saldo': 40} para ('127.0.0.1', 38830)
+Fim da transação
+============================
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'owner_name': 'sabry', 'amount': 0}
+Processando mensagem....
+transação VALIDA, novo bloco inserido na BlockChain
+
+======================
+Blockchain completa:
+======================
+
+Bloco 0:
+Owner:    genesis
+Amount:   100
+Nonce:    0
+Hash:     48c02b622231a3801e44c39d283a4c802b5cc87b0bbcedd0d9ed3310c4d40adb
+Prev. Hash: 0
+|
+v
+
+Bloco 1:
+Owner:    sabry
+Amount:   80
+Nonce:    0
+Hash:     bf9cbc43ac40766009305ade044f314c59801dac1235ca3872a2ce999549c2f8
+Prev. Hash: 48c02b622231a3801e44c39d283a4c802b5cc87b0bbcedd0d9ed3310c4d40adb
+|
+v
+
+Bloco 2:
+Owner:    sabry
+Amount:   -70
+Nonce:    0
+Hash:     9bf641abdba4d13a2559fd13328cc906c5733513de1541ad5708d976eae53956
+Prev. Hash: bf9cbc43ac40766009305ade044f314c59801dac1235ca3872a2ce999549c2f8
+|
+v
+
+Bloco 3:
+Owner:    patrick
+Amount:   40
+Nonce:    0
+Hash:     aeb46bb28ad2815d5ec902a0dfca2c129c3c2578f17f269b92d3b59ecdfded9b
+Prev. Hash: 9bf641abdba4d13a2559fd13328cc906c5733513de1541ad5708d976eae53956
+|
+v
+
+Bloco 4:
+Owner:    sabry
+Amount:   0
+Nonce:    0
+Hash:     aa58961c4f60e098d28e5225bf2eaaeec48e2bdbb93f0676d2afa2c3e70d0806
+Prev. Hash: aeb46bb28ad2815d5ec902a0dfca2c129c3c2578f17f269b92d3b59ecdfded9b
+======================
+Enviando resposta {'status': 'sucesso', 'owner_name': 'sabry', 'saldo': 10} para ('127.0.0.1', 38830)
+Fim da transação
+============================
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'owner_name': 'patrick', 'amount': 0}
+Processando mensagem....
+transação VALIDA, novo bloco inserido na BlockChain
+
+======================
+Blockchain completa:
+======================
+
+Bloco 0:
+Owner:    genesis
+Amount:   100
+Nonce:    0
+Hash:     48c02b622231a3801e44c39d283a4c802b5cc87b0bbcedd0d9ed3310c4d40adb
+Prev. Hash: 0
+|
+v
+
+Bloco 1:
+Owner:    sabry
+Amount:   80
+Nonce:    0
+Hash:     bf9cbc43ac40766009305ade044f314c59801dac1235ca3872a2ce999549c2f8
+Prev. Hash: 48c02b622231a3801e44c39d283a4c802b5cc87b0bbcedd0d9ed3310c4d40adb
+|
+v
+
+Bloco 2:
+Owner:    sabry
+Amount:   -70
+Nonce:    0
+Hash:     9bf641abdba4d13a2559fd13328cc906c5733513de1541ad5708d976eae53956
+Prev. Hash: bf9cbc43ac40766009305ade044f314c59801dac1235ca3872a2ce999549c2f8
+|
+v
+
+Bloco 3:
+Owner:    patrick
+Amount:   40
+Nonce:    0
+Hash:     aeb46bb28ad2815d5ec902a0dfca2c129c3c2578f17f269b92d3b59ecdfded9b
+Prev. Hash: 9bf641abdba4d13a2559fd13328cc906c5733513de1541ad5708d976eae53956
+|
+v
+
+Bloco 4:
+Owner:    sabry
+Amount:   0
+Nonce:    0
+Hash:     aa58961c4f60e098d28e5225bf2eaaeec48e2bdbb93f0676d2afa2c3e70d0806
+Prev. Hash: aeb46bb28ad2815d5ec902a0dfca2c129c3c2578f17f269b92d3b59ecdfded9b
+|
+v
+
+Bloco 5:
+Owner:    patrick
+Amount:   0
+Nonce:    0
+Hash:     fc7a617c1e36b34e03a6b7229dd2e7df0d629181f193cddc6f0d692553fa3616
+Prev. Hash: aa58961c4f60e098d28e5225bf2eaaeec48e2bdbb93f0676d2afa2c3e70d0806
+======================
+Enviando resposta {'status': 'sucesso', 'owner_name': 'patrick', 'saldo': 40} para ('127.0.0.1', 38830)
+Fim da transação
+============================
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'exit': True}
+Processando mensagem....
+
+Fechando conexão...

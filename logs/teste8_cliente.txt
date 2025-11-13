@@ -1,0 +1,24 @@
+=============================================================================
+Iniciando cliente do Block Chain
+=============================================================================
+Cliente iniciado no host: localhost port: 8082 
+
+
+
+=== Menu ===
+1. Nova movimentação
+2. Ver saldo
+3. Sair
+Escolha uma opção: 2
+Digite o nome do proprietário: sabry
+Enviando {'owner_name': 'sabry', 'amount': 0}
+Resposta recebida, processando resposta...
+{'status': 'sucesso', 'owner_name': 'sabry', 'saldo': 0}
+
+=== Menu ===
+1. Nova movimentação
+2. Ver saldo
+3. Sair
+Escolha uma opção: 3
+Enviando {'exit': True}
+Fechando conexão...

@@ -1,0 +1,114 @@
+=============================================================================
+Iniciando servidor do Block Chain
+=============================================================================
+Criando genesis...
+Genesis criado com sucesso!
+
+======================
+Blockchain completa:
+======================
+
+Bloco 0:
+Owner:    genesis
+Amount:   100
+Nonce:    0
+Hash:     1325f1ff04f81923f33186cb22c24b477bc184cd455235efedd552967c97ecc6
+Prev. Hash: 0
+======================
+Servidor iniciado no host: localhost port: 8082 
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'owner_name': 'sabry', 'amount': 50}
+Processando mensagem....
+transação VALIDA, novo bloco inserido na BlockChain
+
+======================
+Blockchain completa:
+======================
+
+Bloco 0:
+Owner:    genesis
+Amount:   100
+Nonce:    0
+Hash:     1325f1ff04f81923f33186cb22c24b477bc184cd455235efedd552967c97ecc6
+Prev. Hash: 0
+|
+v
+
+Bloco 1:
+Owner:    sabry
+Amount:   50
+Nonce:    0
+Hash:     eb43cd7267e9e55f357e5e1edefec89b81d777be22442488ecf05fe8c3284f08
+Prev. Hash: 1325f1ff04f81923f33186cb22c24b477bc184cd455235efedd552967c97ecc6
+======================
+Enviando resposta {'status': 'sucesso', 'owner_name': 'sabry', 'saldo': 50} para ('127.0.0.1', 57326)
+Fim da transação
+============================
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'owner_name': 'sabry', 'amount': -80}
+Processando mensagem....
+Saldo insuficiente
+transação INVALIDA: saldo insuficiente
+Enviando resposta {'status': 'erro', 'tipo': 'saldo insuficiente', 'owner_name': 'sabry', 'saldo': 50} para ('127.0.0.1', 57326)
+Fim da transação
+============================
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'owner_name': 'patrick', 'amount': 40}
+Processando mensagem....
+transação VALIDA, novo bloco inserido na BlockChain
+
+======================
+Blockchain completa:
+======================
+
+Bloco 0:
+Owner:    genesis
+Amount:   100
+Nonce:    0
+Hash:     1325f1ff04f81923f33186cb22c24b477bc184cd455235efedd552967c97ecc6
+Prev. Hash: 0
+|
+v
+
+Bloco 1:
+Owner:    sabry
+Amount:   50
+Nonce:    0
+Hash:     eb43cd7267e9e55f357e5e1edefec89b81d777be22442488ecf05fe8c3284f08
+Prev. Hash: 1325f1ff04f81923f33186cb22c24b477bc184cd455235efedd552967c97ecc6
+|
+v
+
+Bloco 2:
+Owner:    patrick
+Amount:   40
+Nonce:    0
+Hash:     3f43a099a38a457449877be0eb2fb33b0cb922309dbc9e516441552d4f7ecb65
+Prev. Hash: eb43cd7267e9e55f357e5e1edefec89b81d777be22442488ecf05fe8c3284f08
+======================
+Enviando resposta {'status': 'sucesso', 'owner_name': 'patrick', 'saldo': 40} para ('127.0.0.1', 57326)
+Fim da transação
+============================
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'owner_name': 'patrick', 'amount': -80}
+Processando mensagem....
+Saldo insuficiente
+transação INVALIDA: saldo insuficiente
+Enviando resposta {'status': 'erro', 'tipo': 'saldo insuficiente', 'owner_name': 'patrick', 'saldo': 40} para ('127.0.0.1', 57326)
+Fim da transação
+============================
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'exit': True}
+Processando mensagem....
+
+Fechando conexão...

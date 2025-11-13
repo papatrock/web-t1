@@ -1,0 +1,94 @@
+=============================================================================
+Iniciando servidor do Block Chain
+=============================================================================
+Criando genesis...
+Genesis criado com sucesso!
+
+======================
+Blockchain completa:
+======================
+
+Bloco 0:
+Owner:    genesis
+Amount:   100
+Nonce:    0
+Hash:     906c3abe4b839f43153b1fc82a7901611d3a18b2877ab761b4f1d730ad7ad9fb
+Prev. Hash: 0
+======================
+Servidor iniciado no host: localhost port: 8082 
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'owner_name': 'sabry', 'amount': 80}
+Processando mensagem....
+transação VALIDA, novo bloco inserido na BlockChain
+
+======================
+Blockchain completa:
+======================
+
+Bloco 0:
+Owner:    genesis
+Amount:   100
+Nonce:    0
+Hash:     906c3abe4b839f43153b1fc82a7901611d3a18b2877ab761b4f1d730ad7ad9fb
+Prev. Hash: 0
+|
+v
+
+Bloco 1:
+Owner:    sabry
+Amount:   80
+Nonce:    0
+Hash:     2a6923856d5cdbb826c16be8baa9855b3ba9281bf10cc06da5f1fd7c32ed91c6
+Prev. Hash: 906c3abe4b839f43153b1fc82a7901611d3a18b2877ab761b4f1d730ad7ad9fb
+======================
+Enviando resposta {'status': 'sucesso', 'owner_name': 'sabry', 'saldo': 80} para ('127.0.0.1', 60160)
+Fim da transação
+============================
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'owner_name': 'sabry', 'amount': 0}
+Processando mensagem....
+transação VALIDA, novo bloco inserido na BlockChain
+
+======================
+Blockchain completa:
+======================
+
+Bloco 0:
+Owner:    genesis
+Amount:   100
+Nonce:    0
+Hash:     906c3abe4b839f43153b1fc82a7901611d3a18b2877ab761b4f1d730ad7ad9fb
+Prev. Hash: 0
+|
+v
+
+Bloco 1:
+Owner:    sabry
+Amount:   80
+Nonce:    0
+Hash:     2a6923856d5cdbb826c16be8baa9855b3ba9281bf10cc06da5f1fd7c32ed91c6
+Prev. Hash: 906c3abe4b839f43153b1fc82a7901611d3a18b2877ab761b4f1d730ad7ad9fb
+|
+v
+
+Bloco 2:
+Owner:    sabry
+Amount:   0
+Nonce:    0
+Hash:     c5b7a078c88d1620aab8a3a752ed3492003e4aefaef2c76d2c323fc1dc1a509f
+Prev. Hash: 2a6923856d5cdbb826c16be8baa9855b3ba9281bf10cc06da5f1fd7c32ed91c6
+======================
+Enviando resposta {'status': 'sucesso', 'owner_name': 'sabry', 'saldo': 80} para ('127.0.0.1', 60160)
+Fim da transação
+============================
+
+
+Esperando para receber a mensagem do cliente...
+Mensagem recebida, Dados: {'exit': True}
+Processando mensagem....
+
+Fechando conexão...
