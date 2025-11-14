@@ -7,54 +7,53 @@
             <p> Patrick Oliveira Lemes GRR20211777</p>
             <p> Sabry Inacio Rafrafi GRR20171622</p>
 
-            <h1>Implementação</h1>
+            <h2>Implementação</h2>
             <p>
                 Para a implementação da conexão cliente - servidor foi utilizado a biblioteca do python <strong>Lib/socket.py</strong> que contem funções
                 que facilitam a criação de conexões entre processos via TCP/IP
             </p>
-            <h2>Implementação da conexão do Cliente - Servidor</h2>
-                <h3>Conexão</h3>
+            <h3>Implementação da conexão do Cliente - Servidor</h3>
+                <h4>Conexão</h4>
                 <p>
                     A parte de conexão, tanto do servidor quanto do cliente, se consiste em criar um socket do tipo TCP/IP
                     e definir o endereço e porta onde ele vai ficar "escutando" (no caso do servidor) ou em qual servidor ele
                     vai se conectar (no caso do cliente):
                 </p>
                 <p>Primeiro criamos o socket:</p>
-                <pre>
+                <pre class="code-editor">
                     <code>
-                        import socket
-                        # Cria um socket
-                        sock = socket.socket(family, type, proto = 0)
-
+    <span class="py-keyword">import</span> socket
+    <span class="py-comment"># Cria um socket</span>
+    <span class="py-variable">sock</span> = socket.socket(family, type, proto = <span class="py-number">0</span>)
                     </code>
                 </pre>
                 <p>
-                    <strong>socket.socket</strong> cria um objeto do tipo socket com base nos parametros passados
-                    O parametro <strong>family</strong> espeficica a familia de endereços que se deseja utilizar, no nosso caso utilizamos, podendo ser IPv4, IPv6 entre
-                    outros mais especificos.
+                    <strong>socket.socket</strong> cria um objeto do tipo socket com base nos parametros passados.
+                    O parâmetro <strong>family</strong> especifica a família de endereços (como IPv4 ou IPv6). No nosso caso, utilizamos <strong>socket.AF_INET</strong> (IPv4).
                     O parametro <strong>type</strong> especifica o tipo do socket utilizado, o que determina a semantica da comunicação, ela pode ser TCP, UDP,
                     RAW entre outros.
                     Já o parametro <strong>proto</strong> especifica qual protocolo será utilizado, por default ele é "0" e quando setado assim, a escolha do protocolo
                     é feito de forma automática com base no tipo e na familia escolhida
                     Então, nosso socket foi criado na forma:
                 </p>
-                <pre>
+                <pre class="code-editor">
                     <code>
-                        import socket
+    <span class="py-keyword">import</span> socket
 
-                        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                        # proto foi omitido
+    <span class="py-variable">sock</span> = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    <span class="py-comment"># proto foi omitido</span>
 
-                        # um "helper" para reutilizar a porta imediatamente após ser fechada
-                        sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    <span class="py-comment"># um "helper" para reutilizar a porta imediatamente após ser fechada</span>
+    <span class="py-variable">sock</span>.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, <span class="py-number">1</span>)
                     </code>
                 </pre>
+
                 <ul>
                     <li>
                         <strong>family</strong> = AF_INET (IPv4)
                     </li>
                     <li>
-                        <strong>type</strong> = SOCK_STRAM (TCP)
+                        <strong>type</strong> = SOCK_STREAM (TCP)
                     </li>
                     <li>
                         <strong>proto</strong> = foi omitido então será usado o default (0)
@@ -65,36 +64,38 @@
                     o <strong>connect</strong> no qual o <strong>cliente</strong> vai se conectar:
                 </p>
 
-                <!-- teste de cor -->
+                <h5>Para o servidor:</h5>
+                <pre class="code-editor">
+                    <code>
+    <span class="py-comment"># define o endereço e a porta do servidor</span>
+    <span class="py-keyword">def</span> <span class="py-func">server</span>(<span class="py-variable">host</span> = <span class="py-string">'localhost'</span>, <span class="py-variable">port</span>=<span class="py-number">8082</span>):
+        <span class="py-variable">sock</span> = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        <span class="py-variable">server_address</span> = (<span class="py-variable">host</span>, <span class="py-variable">port</span>)
 
-                <h4>Para o servidor:</h4>
-                <pre style="background-color:black;">
-                    <code style="color: aliceblue;">
-                        # define o endereço e a porta do servidor
-                       def server(host = 'localhost', port=8082):
-                            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                            server_address = (host, port)
+        <span class="py-comment"># Faz o bind do socket na porta e endereço especificado</span>
+        <span class="py-variable">sock</span>.bind(<span class="py-variable">server_address</span>)
 
-                            # Faz o bind do socket na porta e endereço especificado
-                            sock.bind(server_address)
+        <span class="py-comment"># Espera uma conexão</span>
+        <span class="py-variable">client</span>, <span class="py-variable">address</span> = <span class="py-variable">sock</span>.accept()
                     </code>
                 </pre>
                 <p>
                     Ou seja, o socket TCP/IP criado está "bindado" a porta 8082 do endereço "localhost".
-                    E Então, usamos a função "sock.listen(5)" para deixar o socket escutando mensagens em um loop infinito
-                    (OBS: o parametro dessa função "5" especifica o numero máximo de conexões na fila do socket)
+                    e então, usamos a função "sock.listen(5)" para preparar uma fila de até 5 conexões. Após isso
+                    o servidor entra em um loop infinito e chama sock.accept(). Esta função pausa o programa e espera
+                      ativamente por uma conexão. Quando um cliente se conecta, accept() retorna um novo socket dedicado
+                      a esse cliente, e o loop recomeça, pronto para aceitar o próximo cliente
                 </p>
 
-                <h4>Para o cliente:</h4>
-                <pre style="background-color:black;">
-                    <code style="color: aliceblue;">
-                        # define o endereço e a porta do cliente
-                       def client(host = 'localhost', port=8082):
-                            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                            server_address = (host, port)
-                            # Conecta o socket ao servidor
-                            sock.connect(server_address)
-
+                <h5>Para o cliente:</h5>
+                <pre class="code-editor">
+                    <code>
+    <span class="py-comment"># define o endereço e a porta do cliente</span>
+    <span class="py-keyword">def</span> <span class="py-func">client</span>(<span class="py-variable">host</span> = <span class="py-string">'localhost'</span>, <span class="py-variable">port</span>=<span class="py-number">8082</span>):
+        <span class="py-variable">sock</span> = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        <span class="py-variable">server_address</span> = (<span class="py-variable">host</span>, <span class="py-variable">port</span>)
+        <span class="py-comment"># Conecta o socket ao servidor</span>
+        <span class="py-variable">sock</span>.connect(<span class="py-variable">server_address</span>)
                     </code>
                 </pre>
                 <p>
@@ -102,7 +103,7 @@
                     <strong>8082</strong>
                 </p>
 
-            <h2>Implementação da BlockChain</h2>
+            <h3>Implementação da BlockChain</h3>
                 <p>
                     Para a implementação do <strong>MiniCoin</strong> toda a <strong>Blockchain</strong> fica no servidor, então além da parte de conexão,
                     toda logica de criação e gerenciamento da chain fica no servidor e na parte do cliente apenas o envio de operações.
@@ -110,14 +111,14 @@
                 <p>
                     Implementamos de forma que possam existir diversos usuario, o formato da mensagem que o cliente manda
                     para o servidor é no formato:
-                    <pre style="background-color:black;">
-                    <code style="color: aliceblue;">
-                        {
-                            "owner_name": "nome_do_proprietario",
-                            "amount": Quantidade
-                        }
-                    </code>
-                </pre>
+                    <pre class="code-editor">
+                        <code>
+    {
+        <span class="py-string">"owner_name"</span>: <span class="py-string">"nome_do_proprietario"</span>,
+        <span class="py-string">"amount"</span>: <span class="py-variable">Quantidade</span>
+    }
+                        </code>
+                    </pre>
                     Quando a quantidade é <strong>positiva</strong>, significa que a operação é um <strong>depósito</strong>, nesse caso
                     é somado a quantidade ao valor que o proprietario já tem; Caso a quantidade seja
                     <strong>negativa</strong> significa que a operação é uma <strong>retirada</strong>, então primeiro é validado se o proprietario
@@ -125,7 +126,7 @@
                     o proprietario tem, caso negativo, é retornado uma mensagem de erro e a blockchain não é alterada. Na operação de deposito,
                     caso o nome do proprietario passado não esteja no blockchain ainda, é "criado" um novo úsuario com valor inicial = ao amount passado.
                 </p>
-                <h3>Classe Block</h3>
+                <h4>Classe Block</h4>
                     <p>
                         Toda operação, seja deposito ou retirada, gera um novo bloco que é adicionado no fim do BlockChain, para
                         implementar isso criamos a classe <strong>Block</strong> no arquivo <strong>servidor/Block.py</strong> responsavel por criar um novo bloco. Nela também é
@@ -134,7 +135,7 @@
                         de hash <strong>sha256</strong> da biblioteca <strong>hashlib</strong> do python.
                     </p>
 
-                <h3>Classe BlockChain</h3>
+                <h4>Classe BlockChain</h4>
                     <p>
                         Já as operações que manipulam a BlockChain foram implementados na classe <strong>BlockChain</strong> implementado no arquivo
                         <strong>servidor/Blockchain.py</strong>, nessa classe existem dois apontadores para facilitar as operações, o <strong>head</strong>
@@ -161,6 +162,7 @@
                     </p>
 
             <h2>funcionamento</h2>
+            <p>Para exemplificar o funcionamento de nossa BlockChain, fizemos uma fluxograma mostrando passo a passo de como nosso minicoin funciona:</p>
             <img src="images/minicoin/diagrama.png" alt="Diagrama de funcionamento do sistema">
 
             <h2>Códigos-fonte</h2>
@@ -177,7 +179,7 @@
                 <p>Teste 3: <a href="logs/teste3_cliente.txt">Cliente</a> <a href="logs/teste3_servidor.txt">Servidor</a></p>
                 <p>Teste 4: <a href="logs/teste4_cliente.txt">Cliente</a> <a href="logs/teste4_servidor.txt">Servidor</a></p>
                 <p>Teste 5: <a href="logs/teste5_cliente.txt">Cliente</a> <a href="logs/teste5_servidor.txt">Servidor</a></p>
-                <p>Teste 6: <a href="logs/teste6_cliente.txt">Cliente</a> <a href="logs/teste6_servidor.txt">Servidor</a></p>
+                <p>Teste 6: <a href="logs/teste6_cliente.txt">Cliente</a> <a href="logsS/teste6_servidor.txt">Servidor</a></p>
                 <p>Teste 7: <a href="logs/teste7_cliente.txt">Cliente</a> <a href="logs/teste7_servidor.txt">Servidor</a></p>
                 <p>Teste 8: <a href="logs/teste8_cliente.txt">Cliente</a> <a href="logs/teste8_servidor.txt">Servidor</a></p>
                 <p>Teste 9: <a href="logs/teste9_cliente.txt">Cliente</a> <a href="logs/teste9_servidor.txt">Servidor</a></p>
@@ -188,3 +190,60 @@
     </section>
 
 </section>
+
+<style>
+
+    pre.code-editor {
+        background-color: #272822;
+        color: #f8f8f2;
+        border: 1px solid #555;
+        border-radius: 8px;
+        padding: 1.5em;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+        line-height: 1.5;
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    pre.code-editor code {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+
+    .py-comment {
+        color: #81c784;
+        font-style: italic;
+    }
+
+
+    .py-keyword {
+        color: #f92672;
+    }
+
+    .py-func {
+        color: #a6e22e;
+    }
+
+    .py-string {
+        color: #e6db74;
+    }
+
+    .py-number {
+        color: #ae81ff;
+    }
+
+    .py-variable {
+        color: #fd971f;
+    }
+
+    img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+</style>
