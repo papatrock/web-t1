@@ -1,118 +1,484 @@
-    <section id="app">
-        <div class="row">
-    
-          <div class="col-sm-12 col-lg-6" id="apresentacao"> <!-- coluna do sobre --> 
-            <p>Olá! me chamo Patrick estudante de Ciência da computação na UFPR desde 2021, atualmente no quinto periodo.
-               Entusiasta em software livre, minhas áreas de interesse são: redes, segurança, computação gráfica e programação web. Você pode saber mais sobre minha trajetória e meus contatos em "Sobre".
-            </p>
-    
-        </div>
-        <!-- ---------------fim coluna sobre ---------------------->
-    
-        <!----------------- coluna 'projetos' --------------------->
-        <div class="col-sm-12 col-lg-6 projetos" id="projeto"> 
-          <h1 style="text-align: center;">Alguns dos meus projetos:</h1>
-          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/papatrock/ballz-C">
-                    <img src="images/home/ballz-completo.png" class="d-block w-100" alt="Replica do jogo Ballz feito em C com a biblioteca Allegro">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Ballz</h5>
-                      <p>Replica do jogo Ballz implementado em C com a biblioteca Allegro.</p>
-                    </div>
-                  </a>
-                </div>
-                <div class="carousel-item">
-                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/papatrock/nvim">
-                    <img src="images/home/neovim.png" class="d-block w-100" alt="Minha configuração do neovim">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Neovim</h5>
-                      <p>Minha configuração do neovim.</p>
-                    </div>
-                  </a>
-                </div>
-                <div class="carousel-item">
-                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/papatrock/tf_arquitetura">
-                    <img src="images/home/processador.png" class="d-block w-100" alt="Replica do jogo Ballz feito em C com a biblioteca Allegro">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Processador 8 bits</h5>
-                        <p>Processador 8 bits baseado no RISC-V com memória cache implementado no logisim evolution.</p>
-                    </div>
-                  </a>
-                </div>
-                <div class="carousel-item">
-                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/papatrock/t1-redes">
-                    <img src="images/home/backup.png" class="d-block w-100" alt="Sistema servidor-cliente de backup de arquivos.">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Sistema de backup</h5>
-                      <p>Sistema servidor-cliente de backup de arquivos feito em raw socket.</p>
-                    </div>
-                  </a>
-                </div>
-                <div class="carousel-item">
-                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/papatrock/trabalho-software-basico">
-                  <img src="images/home/meu-aloc.png" class="d-block w-100" alt="Alocador de memoria implementado em assembly x86.">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Alocador de memória</h5>
-                    <p>Alocador de memoria implementado em assembly x86.</p>
-                  </div>
-                  </a>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-        </div>
-        <!-- ---------------fim da coluna projetos-------------------->
-    
-    
-    
-      </div>
-        <!-- ---------------coluna tecnologias-------------------------------->
-        <div class="row tecnologias">
-          <h2><strong>Tecnlogias que utilizo:</strong></h2>
-          <div id="tech-icons">
-            <i class="devicon-c-plain "></i>
-            <i class="devicon-cplusplus-plain "></i>
-            <i class="devicon-bash-plain"></i>
-            <i class="devicon-linux-plain"></i>
-            <i class="devicon-php-plain "></i>
-            <i class="devicon-java-plain-wordmark"></i>
-            <i class="devicon-javascript-plain"></i>
-            <i class="devicon-git-plain-wordmark"></i>
-            <i class="devicon-lua-plain"></i>
-            <i class="devicon-docker-plain"></i>
-            <i class="devicon-haskell-plain-wordmark"></i>
-            <i class="devicon-laravel-original-wordmark"></i>
-            <i class="devicon-symfony-original-wordmark colored"></i>
-            <i class="devicon-vuejs-plain-wordmark"></i>
-            <i class="devicon-mariadb-original-wordmark"></i>
-            <i class="devicon-mysql-original"></i>
-            <i class="devicon-postgresql-plain-wordmark"></i>
-            <i class="devicon-doctrine-plain-wordmark"></i>
-                    
+<div class="home-page enter">
+  <section class="hero hero-neofetch" aria-labelledby="hero-title">
+    <div class="hero-art">
+      <div class="terminal-window">
+        <div class="terminal-bar">
+          <div class="window-dots" aria-hidden="true">
+            <span></span><span></span><span></span>
           </div>
-    
+          <span class="mono">patrick@portfolio: ~</span
+          ><i class="bi bi-terminal" aria-hidden="true"></i>
         </div>
-        <!-- ---------------fim da coluna tecnologias-------------------------------->
-    
-        <!-- ----------------profissional path------------------------->
-        
-    
+        <div class="terminal-body">
+          <div class="terminal-command mono">
+            <h1 id="hero-title" class="terminal-user">Patrick Lemes</h1>
+            ~ $ neofetch
+          </div>
+          <div class="neofetch-output">
+            <pre
+              class="ascii-art neofetch-dog"
+              role="img"
+              aria-label="Annoying Dog, o doguinho de Undertale, em arte de caracteres"
+            >
+  ██  ████████  ██
+  ████████████████
+  ██████████████████
+████  ████  ██████████            ██
+████████████████████████          ██
+██████    ██████████████████      ██
+██  ██  ████  ██████████████████████
+████        ████████████████████████
+████████████████████████████████████
+████████████████████████████████████
+████████████████████████████████████
+████████████████████████████████████
+██████████████████████████████████
+  ████████████████████████████████
+  ████    ████        ████    ████
+  ████    ████        ████    ████
+  ██      ██          ██      ██</pre>
+            <div class="neofetch-info mono">
+              <p class="neofetch-host">
+                <span>patrick</span>@<span>portfolio</span>
+              </p>
+              <div class="neofetch-rule" aria-hidden="true">
+                --------------------------
+              </div>
+              <dl class="neofetch-details">
+                <div>
+                  <dt>Atuação</dt>
+                  <dd>Desenvolvedor full stack</dd>
+                </div>
+                <div>
+                  <dt>Trabalho</dt>
+                  <dd>Simepar · estágio</dd>
+                </div>
+                <div>
+                  <dt>Formação</dt>
+                  <dd>Ciência da Computação · UFPR (em curso)</dd>
+                </div>
+                <div>
+                  <dt>Foco</dt>
+                  <dd>Soluções geoespaciais e mapas interativos</dd>
+                </div>
+                <div>
+                  <dt>Stack</dt>
+                  <dd>Python · Flask · Spring Boot · Scala · PostGIS</dd>
+                </div>
+                <div>
+                  <dt>Infra</dt>
+                  <dd>Linux · Docker · Kubernetes</dd>
+                </div>
+                <div>
+                  <dt>GitHub</dt>
+                  <dd>
+                    <a
+                      href="https://github.com/papatrock"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >@papatrock ↗</a
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>Contato</dt>
+                  <dd>
+                    <a href="mailto:pol21@inf.ufpr.br">pol21@inf.ufpr.br</a>
+                  </dd>
+                </div>
+              </dl>
+              <div class="neofetch-palette" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span
+                ><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+          <p class="terminal-prompt mono">
+            <span>Patrick Lemes</span> ~ $
+            <span class="cursor" aria-hidden="true">█</span>
+          </p>
         </div>
-</section>
-
+      </div>
+      <div class="perspective-grid" aria-hidden="true"></div>
+    </div>
+    <div class="hero-actions">
+      <a class="button button-primary" href="#/projetos"
+        >Ver projetos <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a
+      ><a class="button" href="#/sobre"
+        >Mais sobre mim <span aria-hidden="true">→</span></a
+      >
+    </div>
+  </section>
+  <div class="intro-divider">
+    <span class="mono">PROJETOS</span><span aria-hidden="true">↓</span
+    ><span class="mono">~/projetos</span>
+  </div>
+  <section class="featured-projects" aria-labelledby="featured-title">
+    <div class="section-heading">
+      <span>01 /</span>
+      <h2 id="featured-title">Projetos</h2>
+      <a href="#/projetos">Ver todos ↗</a>
+    </div>
+    <div
+      class="project-carousel"
+      role="region"
+      aria-roledescription="carrossel"
+      aria-label="Projetos em destaque"
+    >
+      <div class="carousel-controls">
+        <span
+          id="project-position"
+          class="mono"
+          aria-live="polite"
+          aria-atomic="true"
+          >01 / 05 — Ballz</span
+        >
+        <div>
+          <button
+            class="icon-button"
+            data-project-prev
+            aria-label="Projeto anterior"
+            aria-controls="project-track"
+          >
+            ←</button
+          ><button
+            class="icon-button"
+            data-project-next
+            aria-label="Próximo projeto"
+            aria-controls="project-track"
+          >
+            →
+          </button>
+        </div>
+      </div>
+      <div
+        class="project-track"
+        id="project-track"
+        tabindex="0"
+        aria-label="Projetos: use as setas do teclado ou deslize para navegar"
+      >
+        <article
+          class="project-slide"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="1 de 5: Ballz"
+        >
+          <a
+            class="slide-visual"
+            href="https://github.com/papatrock/ballz-C"
+            target="_blank"
+            rel="noopener noreferrer"
+            tabindex="0"
+            ><img
+              src="images/home/ballz-completo.png"
+              alt="Ballz"
+              loading="eager"
+          /></a>
+          <div class="slide-content">
+            <span class="slide-number mono">PROJETO 01 / 05</span>
+            <h3>Ballz</h3>
+            <p>
+              Réplica do jogo Ballz implementada em C com a biblioteca Allegro.
+            </p>
+            <div class="project-tags">
+              <span class="tag">C</span><span class="tag">Allegro</span
+              ><span class="tag">Game dev</span>
+            </div>
+            <a
+              class="button"
+              href="https://github.com/papatrock/ballz-C"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabindex="0"
+              >Ver no GitHub ↗</a
+            >
+          </div>
+        </article>
+        <article
+          class="project-slide"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="2 de 5: Neovim"
+        >
+          <a
+            class="slide-visual"
+            href="https://github.com/papatrock/nvim"
+            target="_blank"
+            rel="noopener noreferrer"
+            tabindex="-1"
+            ><img src="images/home/neovim.png" alt="Neovim" loading="lazy"
+          /></a>
+          <div class="slide-content">
+            <span class="slide-number mono">PROJETO 02 / 05</span>
+            <h3>Neovim</h3>
+            <p>Minha configuração do Neovim.</p>
+            <div class="project-tags">
+              <span class="tag">Lua</span><span class="tag">Neovim</span
+              ><span class="tag">Dotfiles</span>
+            </div>
+            <a
+              class="button"
+              href="https://github.com/papatrock/nvim"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabindex="-1"
+              >Ver no GitHub ↗</a
+            >
+          </div>
+        </article>
+        <article
+          class="project-slide"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="3 de 5: Processador 8 bits"
+        >
+          <a
+            class="slide-visual"
+            href="https://github.com/papatrock/tf_arquitetura"
+            target="_blank"
+            rel="noopener noreferrer"
+            tabindex="-1"
+            ><img
+              src="images/home/processador.png"
+              alt="Processador 8 bits"
+              loading="lazy"
+          /></a>
+          <div class="slide-content">
+            <span class="slide-number mono">PROJETO 03 / 05</span>
+            <h3>Processador 8 bits</h3>
+            <p>
+              Processador de 8 bits baseado em RISC-V com memória cache,
+              implementado no Logisim Evolution.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Logisim</span><span class="tag">RISC-V</span
+              ><span class="tag">Hardware</span>
+            </div>
+            <a
+              class="button"
+              href="https://github.com/papatrock/tf_arquitetura"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabindex="-1"
+              >Ver no GitHub ↗</a
+            >
+          </div>
+        </article>
+        <article
+          class="project-slide"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="4 de 5: Sistema de backup"
+        >
+          <a
+            class="slide-visual"
+            href="https://github.com/papatrock/t1-redes"
+            target="_blank"
+            rel="noopener noreferrer"
+            tabindex="-1"
+            ><img
+              src="images/home/backup.png"
+              alt="Sistema de backup"
+              loading="lazy"
+          /></a>
+          <div class="slide-content">
+            <span class="slide-number mono">PROJETO 04 / 05</span>
+            <h3>Sistema de backup</h3>
+            <p>
+              Sistema cliente-servidor de backup de arquivos utilizando raw
+              sockets.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Redes</span><span class="tag">Raw sockets</span>
+            </div>
+            <a
+              class="button"
+              href="https://github.com/papatrock/t1-redes"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabindex="-1"
+              >Ver no GitHub ↗</a
+            >
+          </div>
+        </article>
+        <article
+          class="project-slide"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="5 de 5: Alocador de memória"
+        >
+          <a
+            class="slide-visual"
+            href="https://github.com/papatrock/trabalho-software-basico"
+            target="_blank"
+            rel="noopener noreferrer"
+            tabindex="-1"
+            ><img
+              src="images/home/meu-aloc.png"
+              alt="Alocador de memória"
+              loading="lazy"
+          /></a>
+          <div class="slide-content">
+            <span class="slide-number mono">PROJETO 05 / 05</span>
+            <h3>Alocador de memória</h3>
+            <p>Alocador de memória implementado em Assembly x86.</p>
+            <div class="project-tags">
+              <span class="tag">Assembly</span><span class="tag">x86</span>
+            </div>
+            <a
+              class="button"
+              href="https://github.com/papatrock/trabalho-software-basico"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabindex="-1"
+              >Ver no GitHub ↗</a
+            >
+          </div>
+        </article>
+      </div>
+      <div class="project-thumbnails" aria-label="Escolher projeto">
+        <button
+          class="project-thumbnail"
+          data-project-index="0"
+          aria-label="Mostrar projeto 1: Ballz"
+          aria-pressed="true"
+        >
+          <img
+            src="images/home/ballz-completo.png"
+            alt=""
+            loading="lazy"
+          /><span>Ballz</span></button
+        ><button
+          class="project-thumbnail"
+          data-project-index="1"
+          aria-label="Mostrar projeto 2: Neovim"
+          aria-pressed="false"
+        >
+          <img src="images/home/neovim.png" alt="" loading="lazy" /><span
+            >Neovim</span
+          ></button
+        ><button
+          class="project-thumbnail"
+          data-project-index="2"
+          aria-label="Mostrar projeto 3: Processador 8 bits"
+          aria-pressed="false"
+        >
+          <img src="images/home/processador.png" alt="" loading="lazy" /><span
+            >Processador 8 bits</span
+          ></button
+        ><button
+          class="project-thumbnail"
+          data-project-index="3"
+          aria-label="Mostrar projeto 4: Sistema de backup"
+          aria-pressed="false"
+        >
+          <img src="images/home/backup.png" alt="" loading="lazy" /><span
+            >Sistema de backup</span
+          ></button
+        ><button
+          class="project-thumbnail"
+          data-project-index="4"
+          aria-label="Mostrar projeto 5: Alocador de memória"
+          aria-pressed="false"
+        >
+          <img src="images/home/meu-aloc.png" alt="" loading="lazy" /><span
+            >Alocador de memória</span
+          >
+        </button>
+      </div>
+    </div>
+  </section>
+  <section class="technologies" aria-labelledby="tech-title">
+    <div class="section-heading">
+      <span>02 /</span>
+      <h2 id="tech-title">Tecnologias</h2>
+    </div>
+    <div class="tech-groups">
+      <section class="tech-group">
+        <h3>Linguagens</h3>
+        <div class="tech-list">
+          <span
+            ><i class="devicon-python-plain" aria-hidden="true"></i>Python</span
+          ><span
+            ><i class="devicon-javascript-plain" aria-hidden="true"></i
+            >JavaScript</span
+          ><span><i class="devicon-c-plain" aria-hidden="true"></i>C</span
+          ><span><i class="devicon-java-plain" aria-hidden="true"></i>Java</span
+          ><span
+            ><i class="devicon-scala-plain" aria-hidden="true"></i>Scala</span
+          ><span><i class="devicon-php-plain" aria-hidden="true"></i>PHP</span
+          ><span
+            ><i class="devicon-bash-plain" aria-hidden="true"></i>Shell
+            Script</span
+          >
+        </div>
+      </section>
+      <section class="tech-group">
+        <h3>Frameworks e build</h3>
+        <div class="tech-list">
+          <span
+            ><i class="devicon-flask-original" aria-hidden="true"></i
+            >Flask</span
+          ><span
+            ><i class="devicon-spring-original" aria-hidden="true"></i>Spring
+            Boot</span
+          ><span><i class="bi bi-box" aria-hidden="true"></i>sbt</span
+          ><span
+            ><i class="devicon-vuejs-plain" aria-hidden="true"></i>Vue.js</span
+          ><span
+            ><i class="devicon-nuxtjs-plain" aria-hidden="true"></i
+            >Nuxt.js</span
+          ><span
+            ><i class="devicon-laravel-original" aria-hidden="true"></i
+            >Laravel</span
+          ><span
+            ><i class="devicon-symfony-original" aria-hidden="true"></i
+            >Symfony</span
+          >
+        </div>
+      </section>
+      <section class="tech-group">
+        <h3>Bancos de dados e geoprocessamento</h3>
+        <div class="tech-list">
+          <span
+            ><i class="devicon-postgresql-plain" aria-hidden="true"></i
+            >PostgreSQL</span
+          ><span><i class="bi bi-geo-alt" aria-hidden="true"></i>PostGIS</span
+          ><span
+            ><i class="devicon-mysql-original" aria-hidden="true"></i
+            >MySQL</span
+          ><span
+            ><i class="devicon-mariadb-original" aria-hidden="true"></i
+            >MariaDB</span
+          >
+        </div>
+      </section>
+      <section class="tech-group">
+        <h3>Infraestrutura e testes</h3>
+        <div class="tech-list">
+          <span
+            ><i class="devicon-linux-plain" aria-hidden="true"></i>Linux</span
+          ><span><i class="devicon-git-plain" aria-hidden="true"></i>Git</span
+          ><span
+            ><i class="devicon-kubernetes-plain" aria-hidden="true"></i
+            >Kubernetes</span
+          ><span
+            ><i class="devicon-docker-plain" aria-hidden="true"></i>Docker</span
+          ><span
+            ><i class="bi bi-arrow-repeat" aria-hidden="true"></i>CI/CD</span
+          ><span
+            ><i class="bi bi-speedometer2" aria-hidden="true"></i>JMeter</span
+          ><span><i class="bi bi-diagram-3" aria-hidden="true"></i>Redes</span>
+        </div>
+      </section>
+    </div>
+  </section>
+  <section class="contact-strip">
+    <div>
+      <h2>Contato</h2>
+    </div>
+    <a class="button" href="mailto:pol21@inf.ufpr.br"
+      >pol21@inf.ufpr.br <i class="bi bi-arrow-up-right" aria-hidden="true"></i
+    ></a>
+  </section>
+</div>

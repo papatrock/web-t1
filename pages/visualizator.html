@@ -1,18 +1,56 @@
-<section>
-  <div id="grade"></div>
-  <div id="popup" class="popup" style="display:none;">
-    <div class="popup-content">
-      <span id="popup-close" style="cursor:pointer;float:right;font-size:1.5em;">&times;</span>
+<section class="visualizer-page enter">
+  <header class="page-heading">
+    <div class="eyebrow">Laboratório / dados acadêmicos</div>
+    <h1>Visualizator<span class="accent">.</span></h1>
+    <p>
+      Explore a grade curricular e o histórico das disciplinas. Busque pelo GRR
+      e selecione uma matéria para ver os detalhes.
+    </p>
+  </header>
+  <form id="search-bar" class="search-form">
+    <label for="search-ra">GRR do aluno</label
+    ><input
+      type="text"
+      id="search-ra"
+      placeholder="Digite seu GRR"
+      autocomplete="off"
+      required
+    /><button class="button button-primary" id="search-btn" type="submit">
+      Buscar →
+    </button>
+  </form>
+  <p id="visualizer-status" class="mono" role="status">
+    Carregando dados acadêmicos...
+  </p>
+  <div id="studentInfo"></div>
+  <div class="grade-legend">
+    <span class="legend-approved">Aprovado</span
+    ><span class="legend-unapproved">Reprovado</span
+    ><span class="legend-registered">Matrícula</span
+    ><span class="legend-equivalence">Equivalência</span
+    ><span class="legend-neutral">Outras situações / não cursado</span>
+  </div>
+  <div
+    class="grade-scroll"
+    tabindex="0"
+    role="region"
+    aria-label="Grade curricular, deslize para ver todos os períodos"
+  >
+    <table id="grade" aria-label="Disciplinas por período"></table>
+  </div>
+  <div id="history" aria-live="polite"></div>
+  <div id="popup" class="popup" style="display: none">
+    <div
+      class="popup-content"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Detalhes da disciplina"
+      tabindex="-1"
+    >
+      <button id="popup-close" class="icon-button" aria-label="Fechar detalhes">
+        ×
+      </button>
       <div id="popup-body"></div>
     </div>
   </div>
-  <div id="search-bar" style="text-align:center; margin-bottom:16px;">
-    <input type="text" id="search-ra" placeholder="Digite o GRR (RA)"
-      style="padding:6px; border-radius:6px; border:1px solid #444; width:180px;">
-    <button id="search-btn"
-      style="padding:6px 16px; border-radius:6px; border:none; background:#3498db; color:#fff; margin-left:8px;">Buscar</button>
-  </div>
-  <div id="studentInfo"></div>
-  <table id="grade"></table>
-  <div id="history"></div>
 </section>

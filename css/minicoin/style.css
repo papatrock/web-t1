@@ -1,6 +1,105 @@
 .main-minicoin {
-    margin: 50px;
-    background-color: whitesmoke;
-    width: 1500px;
-    height: auto;
+  max-width: 900px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--muted);
+  overflow: hidden;
+}
+.web-socket-container {
+  padding: 32px;
+}
+.main-minicoin h1 {
+  font-size: 25px;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+.main-minicoin h2 {
+  font-size: 24px;
+  color: var(--bright);
+  margin: 34px 0 18px;
+}
+.main-minicoin h3 {
+  font-size: 21px;
+  color: var(--text);
+  margin: 28px 0 16px;
+}
+.main-minicoin h4 {
+  font-size: 18px;
+  color: var(--text);
+  margin-top: 24px;
+}
+.main-minicoin h5 {
+  font-size: 16px;
+  color: var(--text);
+  margin-top: 20px;
+}
+.main-minicoin p,
+.main-minicoin li {
+  font-size: 13px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+.main-minicoin strong {
+  color: var(--text);
+  font-weight: 500;
+}
+.main-minicoin a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.main-minicoin img {
+  display: block;
+  margin: 24px auto;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 4px;
+}
+.main-minicoin pre.code-editor {
+  background: #0c0a0f;
+  color: #ddd0e6;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 16px;
+  overflow-x: auto;
+  font: 11px/1.8 var(--mono);
+  max-width: 100%;
+  margin: 20px 0;
+}
+.code-editor code {
+  font: inherit;
+}
+.py-comment {
+  color: #8d9290;
+  font-style: italic;
+}
+.py-keyword {
+  color: #d99ec5;
+}
+.py-func {
+  color: #c6a9e0;
+}
+.py-string {
+  color: #c6c48d;
+}
+.py-number {
+  color: #ae81ff;
+}
+.py-variable {
+  color: #d3ae8c;
+}
+@media (max-width: 560px) {
+  .web-socket-container {
+    padding: 20px;
+  }
+  .main-minicoin h1 {
+    font-size: 22px;
+  }
+  .main-minicoin pre.code-editor {
+    font-size: 10px;
+  }
+  .main-minicoin ul {
+    padding-left: 18px;
+  }
 }

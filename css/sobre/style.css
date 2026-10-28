@@ -1,106 +1,247 @@
-.sidebar #sidebar-sobre{
-    color: black;
-    background-color: whitesmoke;
-    border-radius: 10px;
+.professional-path {
+  padding: 28px;
+  background: #050505ee;
+  border: 1px solid var(--line);
+  border-radius: 4px;
 }
-
-.proffissional-path{
-    background-color: black;
-    margin: 2%;
-    padding: 5%;
-    h1{
-        color: white;
-    }
-    ul.tree, ul.tree ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    ul.tree ul {
-        margin-left: 20px;
-    }
-    
-    ul.tree li {
-        margin: 0;
-        padding: 0 10px;
-        line-height: 28px;
-        color: #369;
-        font-weight: bold;
-        font-size: 18px;
-        border-left: 3px solid rgb(100,100,100);
-    }
-    
-    ul.tree li:last-child {
-        border-left: none;
-    }
-    
-    ul.tree li:before {
-        position: relative;
-        top: -0.4em;
-        height: 1em;
-        width: 16px;
-        color: white;
-        border-bottom: 3px solid rgb(100,100,100);
-        content: "";
-        display: inline-block;
-        left: -10px;
-    }
-    
-    ul.tree li:last-child:before {
-        border-left: 3px solid rgb(100,100,100);
-    }
-    
-    ul.tree li.year{
-        color: white;
-        font-size: x-large;
-    }
-    
-    ul.tree li.title{
-        color: #5ccb5f;
-        font-size: large;
-    }
-    
-    ul.tree li.subtitle{
-        color: #009929;
-        font-size: medium;
-    }
-    
-    ul.tree li.description{
-        color: grey;
-        font-size: small;
-    }
-
+.tree,
+.tree ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-
-#profile-pic{
-    width: 11rem;
-    border-radius: 150px;
-
+.tree {
+  max-width: 900px;
 }
-
-.github-stuff{
+.tree ul {
+  margin-left: 20px;
+  padding-top: 8px;
+}
+.tree li {
+  position: relative;
+  border-left: 2px solid #626262;
+  padding: 0 0 14px 20px;
+  line-height: 1.8;
+}
+.tree li::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 0;
+  width: 14px;
+  border-top: 2px solid #626262;
+}
+.tree li:last-child {
+  border-left-color: transparent;
+}
+.tree li:last-child::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 0;
+  height: 18px;
+  border-left: 2px solid #626262;
+}
+.tree .year {
+  color: var(--text);
+  font: 22px/1.8 var(--mono);
+}
+.tree .title {
+  color: #5ccb5f;
+  font: 18px/1.8 var(--font);
+}
+.tree .subtitle {
+  color: #51a65a;
+  font-size: 16px;
+}
+.tree .description {
+  color: #aaa;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+.tree .description a {
+  color: var(--bright);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.about-page .contact-strip {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.about-page .contact-strip h2 {
+  margin-right: auto;
+}
+.github-section {
+  margin-top: 48px;
+}
+.github-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.github-profile,
+.github-stat-card,
+.github-contributions {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+}
+.github-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 28px;
+}
+.github-profile img {
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 2px solid #482052;
+}
+.github-profile h3 {
+  margin: 0 0 8px;
+  font-size: 23px;
+}
+.github-profile span {
+  color: var(--bright);
+  font-size: 12px;
+}
+.github-stat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px;
+}
+.github-stat-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.github-stat-card > span {
+  display: block;
+  margin-top: auto;
+  padding: 10px 12px 4px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.github-profile:hover,
+.github-stat-card:hover {
+  border-color: var(--accent);
+}
+.github-contributions {
+  padding: 24px;
+  margin-top: 20px;
+}
+.github-contributions h3 {
+  margin: 0 0 20px;
+  font-size: 17px;
+}
+.github-chart-scroll {
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+.github-chart-scroll img {
+  display: block;
+  width: 100%;
+  min-width: 680px;
+  max-width: none;
+  height: auto;
+}
+@media (max-width: 1100px) {
+  .github-profile {
+    flex-direction: column;
+    gap: 16px;
     text-align: center;
-    background-color: #333;
-    border-radius: 10px;
-    img{
-        margin: 1%;
-    }
-    h1{
-        color: #2ea44f;
-        
-    }
-    .github-stats{
-        width: 80%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 0 auto;
-    }
-    h2{
-        color: black;
-    }
-    h3{
-        color: #009929;
-    }
+  }
+}
+@media (max-width: 560px) {
+  .github-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .github-profile {
+    flex-direction: row;
+    text-align: left;
+    padding: 24px 16px;
+  }
+  .github-profile img {
+    width: 72px;
+    height: 72px;
+  }
+  .github-profile h3 {
+    font-size: 20px;
+  }
+  .github-contributions {
+    padding: 20px 16px;
+  }
+  .professional-path {
+    padding: 20px 12px;
+  }
+  .tree ul {
+    margin-left: 10px;
+  }
+  .tree li {
+    padding-left: 12px;
+  }
+  .tree li::before {
+    width: 8px;
+  }
+  .tree .year {
+    font-size: 19px;
+  }
+  .tree .title {
+    font-size: 16px;
+  }
+  .tree .subtitle {
+    font-size: 14px;
+  }
+  .tree .description {
+    font-size: 12px;
+  }
+}
+
+.tree .description strong,
+.education-details strong {
+  color: var(--text);
+  font-weight: 500;
+}
+.education-section {
+  margin-top: 48px;
+}
+.education-details {
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.education-period {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: var(--bright);
+}
+.education-details h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+.education-details p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 12px 0 0;
+}
+@media (max-width: 560px) {
+  .tree .year {
+    font-size: 16px;
+  }
+  .education-details {
+    padding: 20px;
+  }
+  .education-details h3 {
+    font-size: 19px;
+  }
 }

@@ -1,5 +1,38 @@
-<section class="gallery" id="app">
-    <h1>Galeria de fotos</h1>
-    <div id="gallery-container"></div>  
-  </section>
-  
+<section class="gallery enter">
+  <header class="page-heading">
+    <div class="eyebrow">Fotografias</div>
+    <h1>Galeria<span class="accent">.</span></h1>
+    <p>Clique ou toque em uma foto para ampliar.</p>
+  </header>
+  <div class="section-heading">
+    <span>01 /</span>
+    <h2>Galeria de fotos</h2>
+    <span class="photo-count mono">66 registros</span>
+  </div>
+  <div id="gallery-container"></div>
+  <dialog
+    class="photo-dialog"
+    id="photo-dialog"
+    aria-label="Visualização da fotografia"
+  >
+    <div class="photo-dialog-header">
+      <span id="photo-counter" class="mono"></span
+      ><button
+        class="icon-button"
+        data-photo-close
+        aria-label="Fechar fotografia"
+      >
+        ✕
+      </button>
+    </div>
+    <img id="expanded-photo" alt="" />
+    <div class="photo-controls">
+      <button class="button" data-photo-prev aria-label="Foto anterior">
+        ← Anterior</button
+      ><span class="mono">← → navegar · esc fechar</span
+      ><button class="button" data-photo-next aria-label="Próxima foto">
+        Próxima →
+      </button>
+    </div>
+  </dialog>
+</section>

@@ -1,42 +1,54 @@
-<section id="app">
+<section class="minicoin-page enter">
+  <header class="page-heading">
+    <div class="eyebrow">Laboratório / redes e blockchain</div>
+    <h1>MiniCoin<span class="accent">.</span></h1>
+    <p>
+      Uma implementação de blockchain com comunicação cliente-servidor em
+      Python.
+    </p>
+  </header>
+  <section class="main-minicoin">
+    <div class="web-socket-container">
+      <h1>Relatório do trabalho de Redes II</h1>
+      <h2>Alunos</h2>
+      <p>Patrick Oliveira Lemes GRR20211777</p>
+      <p>Sabry Inacio Rafrafi GRR20171622</p>
 
-    <section class="main-minicoin">
-        <div class="web-socket-container" style="padding: 30px;">
-            <h1>Relatório do trabalho de Redes II </h1>
-            <h2>Alunos</h2>
-            <p> Patrick Oliveira Lemes GRR20211777</p>
-            <p> Sabry Inacio Rafrafi GRR20171622</p>
-
-            <h2>Implementação</h2>
-            <p>
-                Para a implementação da conexão cliente - servidor foi utilizado a biblioteca do python <strong>Lib/socket.py</strong> que contem funções
-                que facilitam a criação de conexões entre processos via TCP/IP
-            </p>
-            <h3>Implementação da conexão do Cliente - Servidor</h3>
-                <h4>Conexão</h4>
-                <p>
-                    A parte de conexão, tanto do servidor quanto do cliente, se consiste em criar um socket do tipo TCP/IP
-                    e definir o endereço e porta onde ele vai ficar "escutando" (no caso do servidor) ou em qual servidor ele
-                    vai se conectar (no caso do cliente):
-                </p>
-                <p>Primeiro criamos o socket:</p>
-                <pre class="code-editor">
+      <h2>Implementação</h2>
+      <p>
+        Para a implementação da conexão cliente - servidor foi utilizado a
+        biblioteca do python <strong>Lib/socket.py</strong> que contem funções
+        que facilitam a criação de conexões entre processos via TCP/IP
+      </p>
+      <h3>Implementação da conexão do Cliente - Servidor</h3>
+      <h4>Conexão</h4>
+      <p>
+        A parte de conexão, tanto do servidor quanto do cliente, se consiste em
+        criar um socket do tipo TCP/IP e definir o endereço e porta onde ele vai
+        ficar "escutando" (no caso do servidor) ou em qual servidor ele vai se
+        conectar (no caso do cliente):
+      </p>
+      <p>Primeiro criamos o socket:</p>
+      <pre class="code-editor">
                     <code>
     <span class="py-keyword">import</span> socket
     <span class="py-comment"># Cria um socket</span>
     <span class="py-variable">sock</span> = socket.socket(family, type, proto = <span class="py-number">0</span>)
                     </code>
                 </pre>
-                <p>
-                    <strong>socket.socket</strong> cria um objeto do tipo socket com base nos parametros passados.
-                    O parâmetro <strong>family</strong> especifica a família de endereços (como IPv4 ou IPv6). No nosso caso, utilizamos <strong>socket.AF_INET</strong> (IPv4).
-                    O parametro <strong>type</strong> especifica o tipo do socket utilizado, o que determina a semantica da comunicação, ela pode ser TCP, UDP,
-                    RAW entre outros.
-                    Já o parametro <strong>proto</strong> especifica qual protocolo será utilizado, por default ele é "0" e quando setado assim, a escolha do protocolo
-                    é feito de forma automática com base no tipo e na familia escolhida
-                    Então, nosso socket foi criado na forma:
-                </p>
-                <pre class="code-editor">
+      <p>
+        <strong>socket.socket</strong> cria um objeto do tipo socket com base
+        nos parametros passados. O parâmetro <strong>family</strong> especifica
+        a família de endereços (como IPv4 ou IPv6). No nosso caso, utilizamos
+        <strong>socket.AF_INET</strong> (IPv4). O parametro
+        <strong>type</strong> especifica o tipo do socket utilizado, o que
+        determina a semantica da comunicação, ela pode ser TCP, UDP, RAW entre
+        outros. Já o parametro <strong>proto</strong> especifica qual protocolo
+        será utilizado, por default ele é "0" e quando setado assim, a escolha
+        do protocolo é feito de forma automática com base no tipo e na familia
+        escolhida Então, nosso socket foi criado na forma:
+      </p>
+      <pre class="code-editor">
                     <code>
     <span class="py-keyword">import</span> socket
 
@@ -48,24 +60,22 @@
                     </code>
                 </pre>
 
-                <ul>
-                    <li>
-                        <strong>family</strong> = AF_INET (IPv4)
-                    </li>
-                    <li>
-                        <strong>type</strong> = SOCK_STREAM (TCP)
-                    </li>
-                    <li>
-                        <strong>proto</strong> = foi omitido então será usado o default (0)
-                    </li>
-                </ul>
-                <p>
-                    Após isso, para o servidor, fazemos o <strong>bind</strong> de qual endereço o <strong>servidor</strong> vai ser associado, ou
-                    o <strong>connect</strong> no qual o <strong>cliente</strong> vai se conectar:
-                </p>
+      <ul>
+        <li><strong>family</strong> = AF_INET (IPv4)</li>
+        <li><strong>type</strong> = SOCK_STREAM (TCP)</li>
+        <li>
+          <strong>proto</strong> = foi omitido então será usado o default (0)
+        </li>
+      </ul>
+      <p>
+        Após isso, para o servidor, fazemos o <strong>bind</strong> de qual
+        endereço o <strong>servidor</strong> vai ser associado, ou o
+        <strong>connect</strong> no qual o <strong>cliente</strong> vai se
+        conectar:
+      </p>
 
-                <h5>Para o servidor:</h5>
-                <pre class="code-editor">
+      <h5>Para o servidor:</h5>
+      <pre class="code-editor">
                     <code>
     <span class="py-comment"># define o endereço e a porta do servidor</span>
     <span class="py-keyword">def</span> <span class="py-func">server</span>(<span class="py-variable">host</span> = <span class="py-string">'localhost'</span>, <span class="py-variable">port</span>=<span class="py-number">8082</span>):
@@ -79,16 +89,18 @@
         <span class="py-variable">client</span>, <span class="py-variable">address</span> = <span class="py-variable">sock</span>.accept()
                     </code>
                 </pre>
-                <p>
-                    Ou seja, o socket TCP/IP criado está "bindado" a porta 8082 do endereço "localhost".
-                    e então, usamos a função "sock.listen(5)" para preparar uma fila de até 5 conexões. Após isso
-                    o servidor entra em um loop infinito e chama sock.accept(). Esta função pausa o programa e espera
-                      ativamente por uma conexão. Quando um cliente se conecta, accept() retorna um novo socket dedicado
-                      a esse cliente, e o loop recomeça, pronto para aceitar o próximo cliente
-                </p>
+      <p>
+        Ou seja, o socket TCP/IP criado está "bindado" a porta 8082 do endereço
+        "localhost". e então, usamos a função "sock.listen(5)" para preparar uma
+        fila de até 5 conexões. Após isso o servidor entra em um loop infinito e
+        chama sock.accept(). Esta função pausa o programa e espera ativamente
+        por uma conexão. Quando um cliente se conecta, accept() retorna um novo
+        socket dedicado a esse cliente, e o loop recomeça, pronto para aceitar o
+        próximo cliente
+      </p>
 
-                <h5>Para o cliente:</h5>
-                <pre class="code-editor">
+      <h5>Para o cliente:</h5>
+      <pre class="code-editor">
                     <code>
     <span class="py-comment"># define o endereço e a porta do cliente</span>
     <span class="py-keyword">def</span> <span class="py-func">client</span>(<span class="py-variable">host</span> = <span class="py-string">'localhost'</span>, <span class="py-variable">port</span>=<span class="py-number">8082</span>):
@@ -98,20 +110,24 @@
         <span class="py-variable">sock</span>.connect(<span class="py-variable">server_address</span>)
                     </code>
                 </pre>
-                <p>
-                    Ou seja, o socket do tipo TCP/IP se conectou no endereço <strong>localhost</strong> porta
-                    <strong>8082</strong>
-                </p>
+      <p>
+        Ou seja, o socket do tipo TCP/IP se conectou no endereço
+        <strong>localhost</strong> porta
+        <strong>8082</strong>
+      </p>
 
-            <h3>Implementação da BlockChain</h3>
-                <p>
-                    Para a implementação do <strong>MiniCoin</strong> toda a <strong>Blockchain</strong> fica no servidor, então além da parte de conexão,
-                    toda logica de criação e gerenciamento da chain fica no servidor e na parte do cliente apenas o envio de operações.
-                </p>
-                <p>
-                    Implementamos de forma que possam existir diversos usuario, o formato da mensagem que o cliente manda
-                    para o servidor é no formato:
-                    <pre class="code-editor">
+      <h3>Implementação da BlockChain</h3>
+      <p>
+        Para a implementação do <strong>MiniCoin</strong> toda a
+        <strong>Blockchain</strong> fica no servidor, então além da parte de
+        conexão, toda logica de criação e gerenciamento da chain fica no
+        servidor e na parte do cliente apenas o envio de operações.
+      </p>
+      <p>
+        Implementamos de forma que possam existir diversos usuario, o formato da
+        mensagem que o cliente manda para o servidor é no formato:
+      </p>
+      <pre class="code-editor">
                         <code>
     {
         <span class="py-string">"owner_name"</span>: <span class="py-string">"nome_do_proprietario"</span>,
@@ -119,131 +135,135 @@
     }
                         </code>
                     </pre>
-                    Quando a quantidade é <strong>positiva</strong>, significa que a operação é um <strong>depósito</strong>, nesse caso
-                    é somado a quantidade ao valor que o proprietario já tem; Caso a quantidade seja
-                    <strong>negativa</strong> significa que a operação é uma <strong>retirada</strong>, então primeiro é validado se o proprietario
-                    tem saldo suficiente, caso a validação seja positiva, a transação acontece retirando a quantidade do total de moedas que
-                    o proprietario tem, caso negativo, é retornado uma mensagem de erro e a blockchain não é alterada. Na operação de deposito,
-                    caso o nome do proprietario passado não esteja no blockchain ainda, é "criado" um novo úsuario com valor inicial = ao amount passado.
-                </p>
-                <h4>Classe Block</h4>
-                    <p>
-                        Toda operação, seja deposito ou retirada, gera um novo bloco que é adicionado no fim do BlockChain, para
-                        implementar isso criamos a classe <strong>Block</strong> no arquivo <strong>servidor/Block.py</strong> responsavel por criar um novo bloco. Nela também é
-                        feito o calculo do hash do bloco com base no hash do bloco anterior, timestamp atual, o nonce e os dados,
-                        esses dados são concatenados e é aplicado a função hash, gerando o hash do bloco atual. Optamos por utilizar o algoritimo
-                        de hash <strong>sha256</strong> da biblioteca <strong>hashlib</strong> do python.
-                    </p>
+      <p>
+        Quando a quantidade é <strong>positiva</strong>, significa que a
+        operação é um <strong>depósito</strong>, nesse caso é somado a
+        quantidade ao valor que o proprietario já tem; Caso a quantidade seja
+        <strong>negativa</strong> significa que a operação é uma
+        <strong>retirada</strong>, então primeiro é validado se o proprietario
+        tem saldo suficiente, caso a validação seja positiva, a transação
+        acontece retirando a quantidade do total de moedas que o proprietario
+        tem, caso negativo, é retornado uma mensagem de erro e a blockchain não
+        é alterada. Na operação de deposito, caso o nome do proprietario passado
+        não esteja no blockchain ainda, é "criado" um novo úsuario com valor
+        inicial = ao amount passado.
+      </p>
+      <h4>Classe Block</h4>
+      <p>
+        Toda operação, seja deposito ou retirada, gera um novo bloco que é
+        adicionado no fim do BlockChain, para implementar isso criamos a classe
+        <strong>Block</strong> no arquivo
+        <strong>servidor/Block.py</strong> responsavel por criar um novo bloco.
+        Nela também é feito o calculo do hash do bloco com base no hash do bloco
+        anterior, timestamp atual, o nonce e os dados, esses dados são
+        concatenados e é aplicado a função hash, gerando o hash do bloco atual.
+        Optamos por utilizar o algoritimo de hash <strong>sha256</strong> da
+        biblioteca <strong>hashlib</strong> do python.
+      </p>
 
-                <h4>Classe BlockChain</h4>
-                    <p>
-                        Já as operações que manipulam a BlockChain foram implementados na classe <strong>BlockChain</strong> implementado no arquivo
-                        <strong>servidor/Blockchain.py</strong>, nessa classe existem dois apontadores para facilitar as operações, o <strong>head</strong>
-                        que apontam para o primeiro bloco da blockchain e o <strong>tail</strong> que aponta para o último bloco; Os métodos implementados
-                        nessa classe foram:
-                        <ul>
-                            <li>
-                                <strong>create_genesis_block()</strong>: Cria o bloco "genesis", o primeiro bloco de toda BlockChain
-                            </li>
-                            <li>
-                                <strong>add_block_to_end(owner_name, amount, nonce)</strong>: Cria e insere um novo bloco no fim da BlockChain
-                            </li>
-                            <li>
-                                <strong> get_balance(owner_name)</strong>: Retorna o valor total de moedas do proprietario passado por parametro
-                            </li>
-                            <li>
-                                <strong>get_last_block()</strong>: Retorna o último bloco da BlockChain
-                            </li>
-                            <li>
-                                <strong>print_chain()</strong>: Imprime na tela todos os blocos da BlockChain
-                            </li>
+      <h4>Classe BlockChain</h4>
+      <p>
+        Já as operações que manipulam a BlockChain foram implementados na classe
+        <strong>BlockChain</strong> implementado no arquivo
+        <strong>servidor/Blockchain.py</strong>, nessa classe existem dois
+        apontadores para facilitar as operações, o <strong>head</strong> que
+        apontam para o primeiro bloco da blockchain e o
+        <strong>tail</strong> que aponta para o último bloco; Os métodos
+        implementados nessa classe foram:
+      </p>
+      <ul>
+        <li>
+          <strong>create_genesis_block()</strong>: Cria o bloco "genesis", o
+          primeiro bloco de toda BlockChain
+        </li>
+        <li>
+          <strong>add_block_to_end(owner_name, amount, nonce)</strong>: Cria e
+          insere um novo bloco no fim da BlockChain
+        </li>
+        <li>
+          <strong> get_balance(owner_name)</strong>: Retorna o valor total de
+          moedas do proprietario passado por parametro
+        </li>
+        <li>
+          <strong>get_last_block()</strong>: Retorna o último bloco da
+          BlockChain
+        </li>
+        <li>
+          <strong>print_chain()</strong>: Imprime na tela todos os blocos da
+          BlockChain
+        </li>
+      </ul>
 
-                        </ul>
-                    </p>
+      <h2>funcionamento</h2>
+      <p>
+        Para exemplificar o funcionamento de nossa BlockChain, fizemos uma
+        fluxograma mostrando passo a passo de como nosso minicoin funciona:
+      </p>
+      <img
+        src="images/minicoin/diagrama.png"
+        alt="Diagrama de funcionamento do sistema"
+      />
 
-            <h2>funcionamento</h2>
-            <p>Para exemplificar o funcionamento de nossa BlockChain, fizemos uma fluxograma mostrando passo a passo de como nosso minicoin funciona:</p>
-            <img src="images/minicoin/diagrama.png" alt="Diagrama de funcionamento do sistema">
+      <h2>Códigos-fonte</h2>
+      <p>
+        Abaixo está a versão final dos códigos referentes à implementação
+        proposta:
+      </p>
+      <a href="arquivos/cliente/main.py.txt">cliente/main.py</a><br />
+      <a href="arquivos/servidor/Block.py.txt">servidor/Block.py</a><br />
+      <a href="arquivos/servidor/Blockchain.py.txt">servidor/Blockchain.py</a
+      ><br />
+      <a href="arquivos/servidor/main.py.txt">servidor/main.py</a><br />
 
-            <h2>Códigos-fonte</h2>
-                <p>Abaixo está a versão final dos códigos referentes à implementação proposta:</p>
-                <a href="arquivos/cliente/main.py.txt">cliente/main.py</a><br/>
-                <a href="arquivos/servidor/Block.py.txt">servidor/Block.py</a><br/>
-                <a href="arquivos/servidor/Blockchain.py.txt">servidor/Blockchain.py</a><br/>
-                <a href="arquivos/servidor/main.py.txt">servidor/main.py</a><br/>
-
-            <h2>Logs dos testes realizados</h2>
-                <p>Abaixo estão os arquivos .txt's referentes aos testes realizados na versão final da implementação proposta:</p>
-                <p>Teste 1: <a href="logs/teste1_cliente.txt">Cliente</a> <a href="logs/teste1_servidor.txt">Servidor</a></p>
-                <p>Teste 2: <a href="logs/teste2_cliente.txt">Cliente</a> <a href="logs/teste2_servidor.txt">Servidor</a></p>
-                <p>Teste 3: <a href="logs/teste3_cliente.txt">Cliente</a> <a href="logs/teste3_servidor.txt">Servidor</a></p>
-                <p>Teste 4: <a href="logs/teste4_cliente.txt">Cliente</a> <a href="logs/teste4_servidor.txt">Servidor</a></p>
-                <p>Teste 5: <a href="logs/teste5_cliente.txt">Cliente</a> <a href="logs/teste5_servidor.txt">Servidor</a></p>
-                <p>Teste 6: <a href="logs/teste6_cliente.txt">Cliente</a> <a href="logsS/teste6_servidor.txt">Servidor</a></p>
-                <p>Teste 7: <a href="logs/teste7_cliente.txt">Cliente</a> <a href="logs/teste7_servidor.txt">Servidor</a></p>
-                <p>Teste 8: <a href="logs/teste8_cliente.txt">Cliente</a> <a href="logs/teste8_servidor.txt">Servidor</a></p>
-                <p>Teste 9: <a href="logs/teste9_cliente.txt">Cliente</a> <a href="logs/teste9_servidor.txt">Servidor</a></p>
-                <p>Teste 10: <a href="logs/teste10_cliente.txt">Cliente</a> <a href="logs/teste10_servidor.txt">Servidor</a></p>
-                <p>Teste 11: <a href="logs/teste11_cliente.txt">Cliente</a> <a href="logs/teste11_servidor.txt">Servidor</a></p>
-
-        </div>
-    </section>
-
+      <h2>Logs dos testes realizados</h2>
+      <p>
+        Abaixo estão os arquivos .txt's referentes aos testes realizados na
+        versão final da implementação proposta:
+      </p>
+      <p>
+        Teste 1: <a href="logs/teste1_cliente.txt">Cliente</a>
+        <a href="logs/teste1_servidor.txt">Servidor</a>
+      </p>
+      <p>
+        Teste 2: <a href="logs/teste2_cliente.txt">Cliente</a>
+        <a href="logs/teste2_servidor.txt">Servidor</a>
+      </p>
+      <p>
+        Teste 3: <a href="logs/teste3_cliente.txt">Cliente</a>
+        <a href="logs/teste3_servidor.txt">Servidor</a>
+      </p>
+      <p>
+        Teste 4: <a href="logs/teste4_cliente.txt">Cliente</a>
+        <a href="logs/teste4_servidor.txt">Servidor</a>
+      </p>
+      <p>
+        Teste 5: <a href="logs/teste5_cliente.txt">Cliente</a>
+        <a href="logs/teste5_servidor.txt">Servidor</a>
+      </p>
+      <p>
+        Teste 6: <a href="logs/teste6_cliente.txt">Cliente</a>
+        <a href="logs/teste6_servidor.txt">Servidor</a>
+      </p>
+      <p>
+        Teste 7: <a href="logs/teste7_cliente.txt">Cliente</a>
+        <a href="logs/teste7_servidor.txt">Servidor</a>
+      </p>
+      <p>
+        Teste 8: <a href="logs/teste8_cliente.txt">Cliente</a>
+        <a href="logs/teste8_servidor.txt">Servidor</a>
+      </p>
+      <p>
+        Teste 9: <a href="logs/teste9_cliente.txt">Cliente</a>
+        <a href="logs/teste9_servidor.txt">Servidor</a>
+      </p>
+      <p>
+        Teste 10: <a href="logs/teste10_cliente.txt">Cliente</a>
+        <a href="logs/teste10_servidor.txt">Servidor</a>
+      </p>
+      <p>
+        Teste 11: <a href="logs/teste11_cliente.txt">Cliente</a>
+        <a href="logs/teste11_servidor.txt">Servidor</a>
+      </p>
+    </div>
+  </section>
 </section>
-
-<style>
-
-    pre.code-editor {
-        background-color: #272822;
-        color: #f8f8f2;
-        border: 1px solid #555;
-        border-radius: 8px;
-        padding: 1.5em;
-        overflow-x: auto;
-        font-family: "Courier New", Courier, monospace;
-        font-size: 14px;
-        line-height: 1.5;
-        max-width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    pre.code-editor code {
-        font-family: inherit;
-        font-size: inherit;
-        line-height: inherit;
-    }
-
-
-    .py-comment {
-        color: #81c784;
-        font-style: italic;
-    }
-
-
-    .py-keyword {
-        color: #f92672;
-    }
-
-    .py-func {
-        color: #a6e22e;
-    }
-
-    .py-string {
-        color: #e6db74;
-    }
-
-    .py-number {
-        color: #ae81ff;
-    }
-
-    .py-variable {
-        color: #fd971f;
-    }
-
-    img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    }
-</style>

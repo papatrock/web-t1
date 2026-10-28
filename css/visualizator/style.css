@@ -1,132 +1,206 @@
-body,
-#app,
-section {
-  color: #f5f5f5;
-  background: #181818;
+.search-form {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
 }
-
+.search-form label {
+  font-size: 12px;
+  color: var(--muted);
+}
+.search-form input {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 11px 14px;
+  color: var(--text);
+  max-width: 100%;
+  font: 12px var(--mono);
+  min-height: 46px;
+}
+.search-form .button {
+  box-shadow: none;
+}
+#visualizer-status {
+  font-size: 11px;
+  color: var(--accent);
+}
+#studentInfo {
+  padding: 15px 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+#studentInfo .d-flex {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.grade-legend {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 12px 0 20px;
+}
+.grade-legend > span {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font: 9px var(--mono);
+  color: var(--muted);
+}
+.grade-legend > span:before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: #555;
+}
+.grade-legend .legend-approved:before {
+  background: #3a8655;
+}
+.grade-legend .legend-unapproved:before {
+  background: #a94b5b;
+}
+.grade-legend .legend-registered:before {
+  background: #557db0;
+}
+.grade-legend .legend-equivalence:before {
+  background: #b39b54;
+}
+.grade-scroll {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  margin-bottom: 28px;
+}
 #grade {
   width: 100%;
   border-collapse: separate;
-  margin-bottom: 20px;
-  font-size: 1.2em;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 950px;
+  border-spacing: 4px;
+  font-size: 12px;
 }
-
 .grade__cell {
-  min-width: 110px;
-  min-height: 80px;
-  padding: 16px 8px;
-  border: 1px solid black;
+  min-width: 90px;
+  height: 70px;
+  padding: 12px 6px;
   text-align: center;
-  vertical-align: middle;
+  background: var(--surface-raised);
+  border: 1px solid #382a41;
+  color: #bdb0c4;
+  font: 11px var(--mono);
   cursor: pointer;
-  font-weight: bold;
-  font-size: 1em;
-  transition: background 0.2s, color 0.2s;
+  border-radius: 3px;
 }
-
 .grade_header__cell {
-  background: #222;
-  color: #f5f5f5;
-  font-weight: bold;
+  background: transparent;
+  color: var(--accent);
+  height: 45px;
+  cursor: default;
+  border: 0;
 }
-
 .header__divisor {
-  height: 4px;
-  background: #444;
-  border: none;
+  height: 1px;
+  background: var(--line);
 }
-
-.approved {
-  background: #2ecc40;
-  color: #fff;
+.grade__cell.approved {
+  background: #183b28;
+  border-color: #3a8655;
+  color: #bee5c7;
 }
-
-.unapproved {
-  background: #e74c3c;
-  color: #fff;
+.grade__cell.unapproved {
+  background: #411e28;
+  border-color: #a94b5b;
+  color: #f1bac3;
 }
-
-.registered {
-  background: #3498db;
-  color: #fff;
+.grade__cell.registered {
+  background: #192e48;
+  border-color: #557db0;
+  color: #bcd5f5;
 }
-
-.equivalence {
-  background: #ffe066;
-  color: #222;
+.grade__cell.equivalence {
+  background: #3b3420;
+  border-color: #b39b54;
+  color: #e9dca7;
 }
-
-.canceled {
-  background: #888;
-  color: #fff;
+.grade__cell.canceled,
+.grade__cell.locked {
+  background: #333037;
+  color: #c9c3ce;
 }
-
-.locked {
-  background: #aaa;
-  color: #fff;
-}
-
-.didNotAttended,
-.nao-cursado {
-  background: #222;
-  color: #bbb;
-}
-
-.pointer {
-  cursor: pointer;
-}
-
 .history__wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
+  margin-top: 16px;
 }
-
 .history__cell {
-  /* Remove borda interna */
-  background: #222;
-  color: #f5f5f5;
-  border-radius: 8px;
-  min-width: 120px;
-  padding: 8px;
+  padding: 16px;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  font-size: 12px;
+  line-height: 1.9;
+  border-radius: 4px;
+  min-width: 150px;
 }
-
-.divisor {
-  border-bottom: 2px solid #444;
+#history h4 {
+  font-size: 20px;
 }
-
+#history > span {
+  font-size: 12px;
+  color: var(--muted);
+}
 .popup {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
+  inset: 0;
+  background: #08050ddd;
+  z-index: 80;
+  overflow: auto;
+  padding: 10vh 20px;
 }
-
 .popup-content {
-  background: #222;
-  color: #f5f5f5;
-  padding: 32px 24px;
-  border-radius: 12px;
-  min-width: 320px;
-  max-width: 90vw;
-  box-shadow: 0 0 16px #000;
   position: relative;
+  padding: 32px 24px;
+  background: var(--surface-raised);
+  border: 1px solid #725382;
+  border-radius: 4px;
+  width: min(540px, 100%);
+  margin: auto;
+  color: var(--text);
 }
-
-#students,
-#studentInfo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 16px;
+#popup-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  font-size: 25px;
+}
+#popup-body {
+  padding-top: 12px;
+  font-size: 13px;
+}
+#popup-body h4 {
+  font-size: 18px;
+  padding-right: 20px;
+}
+.grade__cell:hover {
+  filter: brightness(1.25);
+}
+@media (max-width: 560px) {
+  .search-form label {
+    width: 100%;
+  }
+  .search-form input {
+    flex: 1;
+    width: 150px;
+  }
+  .search-form {
+    gap: 10px;
+  }
+  .grade-legend {
+    gap: 10px;
+  }
+  .grade__cell {
+    min-width: 85px;
+    height: 60px;
+  }
 }

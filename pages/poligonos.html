@@ -1,0 +1,39 @@
+<section class="polygon-page enter">
+  <header class="page-heading">
+    <div class="eyebrow">Laboratório / computação gráfica</div>
+    <h1>Retas & polígonos<span class="accent">.</span></h1>
+    <p>Selecione o número de lados, arraste vértices ou corte arestas.</p>
+  </header>
+  <div class="polygon-toolbar">
+    <label for="polygon-sides"
+      >Lados
+      <select id="polygon-sides">
+        <option value="3">3 — Triângulo</option>
+        <option value="4">4 — Quadrilátero</option>
+        <option value="5" selected>5 — Pentágono</option>
+        <option value="6">6 — Hexágono</option>
+        <option value="7">7 — Heptágono</option>
+        <option value="8">8 — Octógono</option>
+      </select></label
+    ><button class="button" id="polygon-cut" aria-pressed="false">
+      ✂ Modo: mover</button
+    ><button class="button" id="polygon-reset">↻ Reiniciar</button>
+  </div>
+  <div class="canvas-wrapper">
+    <canvas
+      id="canvas"
+      width="900"
+      height="560"
+      tabindex="0"
+      aria-label="Editor de polígonos. Arraste os vértices para mover. Ative o modo cortar e toque numa aresta para dividi-la."
+      >Seu navegador não oferece suporte a canvas.</canvas
+    >
+  </div>
+  <p class="canvas-help mono">
+    Arraste um vértice para mover · Ative o modo cortar e toque em uma aresta ·
+    No desktop, o botão direito também corta
+  </p>
+  <p class="polygon-feedback mono" id="polygon-feedback" role="status">
+    5 vértices / 5 arestas
+  </p>
+</section>
